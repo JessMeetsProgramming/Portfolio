@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'concert-one';
-    src: url(\Portfolio\fonts\ConcertOne-Regular.ttf);
+    src: url(\Portfolio\fonts\ConcertOne-Regular.ttf) format('truetype');
 }
 
 @font-face {
@@ -10,47 +10,47 @@
 
 @font-face {
     font-family: 'nunito-italic';
-    src: url(/fonts/Nunito-Italic-VariableFont_wght.ttf);
+    src: url(/Portfolio/fonts/Nunito-Italic-VariableFont_wght.ttf) format('truetype');
 }
 
 @font-face {
     font-family: 'nunito';
-    src: url(/fonts/Nunito-VariableFont_wght.ttf);
+    src: url(/Portfolio/fonts/Nunito-VariableFont_wght.ttf) format('truetype');
 }
 
 @font-face {
     font-family: 'rubik-italic';
-    src: url(/fonts/Rubik-Italic-VariableFont_wght.ttf);
+    src: url(/Portfolio/fonts/Rubik-Italic-VariableFont_wght.ttf) format('truetype');
 }
 
 @font-face {
     font-family: 'rubik';
-    src: url(/fonts/Rubik-VariableFont_wght.ttf);
+    src: url(/Portfolio/fonts/Rubik-VariableFont_wght.ttf) format('truetype');
 }
 
 @font-face {
     font-family: 'rubik-moonrocks';
-    src: url(/fonts/RubikMoonrocks-Regular.ttf);
+    src: url(/Portfolio/fonts/RubikMoonrocks-Regular.ttf) format('truetype');
 }
 
 @font-face {
     font-family: 'smooch';
-    src: url(/fonts/Smooch-Regular.ttf);
+    src: url(/Portfolio/fonts/Smooch-Regular.ttf) format('truetype');
 }
 
 @font-face {
     font-family: 'yellow-rabbit';
-    src: url(/fonts/YellowrabbitPersonaluse-qZYyd.otf) format('opentype');
+    src: url(/Portfolio/fonts/YellowrabbitPersonaluse-qZYyd.otf) format('opentype');
 }
 
 @font-face {
     font-family: 'branda';
-    src: url(/fonts/Branda-yolq.ttf);
+    src: url(/Portfolio/fonts/Branda-yolq.ttf) format('truetype');
 }
 
 @font-face {
     font-family: 'hussar';
-    src: url(/fonts/HussarBoldWeb-bf92.woff) format('woff');
+    src: url(/Portfolio/fonts/HussarBoldWeb-bf92.woff) format('woff');
 }
 
 
