@@ -83,11 +83,12 @@ h1, p {
 }
 
 h1 {
-    font-family: 'finition';
+    font-family: 'finition','Brush Script MT', cursive;
     font-size: 6em;
 }
 
-#avatar {
-    width: 20%;
+span {
+    font-family: 'finition', cursive; 
 }
+
 
