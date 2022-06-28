@@ -1,0 +1,93 @@
+@font-face {
+    font-family: 'concert-one';
+    src: url(/fonts/ConcertOne-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'finition';
+    src: url(/fonts/FinitionPersonalUseOnly-Brnx.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'nunito-italic';
+    src: url(/fonts/Nunito-Italic-VariableFont_wght.ttf);
+}
+
+@font-face {
+    font-family: 'nunito';
+    src: url(/fonts/Nunito-VariableFont_wght.ttf);
+}
+
+@font-face {
+    font-family: 'rubik-italic';
+    src: url(/fonts/Rubik-Italic-VariableFont_wght.ttf);
+}
+
+@font-face {
+    font-family: 'rubik';
+    src: url(/fonts/Rubik-VariableFont_wght.ttf);
+}
+
+@font-face {
+    font-family: 'rubik-moonrocks';
+    src: url(/fonts/RubikMoonrocks-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'smooch';
+    src: url(/fonts/Smooch-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'yellow-rabbit';
+    src: url(/fonts/YellowrabbitPersonaluse-qZYyd.otf) format('opentype');
+}
+
+@font-face {
+    font-family: 'branda';
+    src: url(/fonts/Branda-yolq.ttf);
+}
+
+@font-face {
+    font-family: 'hussar';
+    src: url(/fonts/HussarBoldWeb-bf92.woff) format('woff');
+}
+
+
+.section {
+    text-align: center;
+    /*font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif*/
+}
+
+/* will need to add more styling to ensure image is responsive etc.*/
+#intro {
+    /* change this to a gradient image ??*/
+    background-image: url(images/redblue.jpg);
+    background-size: cover;
+}
+
+#intro2 {
+    /* change this to a gradient image ??*/
+    background-image: url(images/painting.jpg);
+    background-size: cover;
+}
+
+#intro3 {
+    /* change this to a gradient image ??*/
+    background-image: url(images/gradient2H.webp);
+    background-size: cover;
+}
+
+h1, p {
+    color:aliceblue;
+}
+
+h1 {
+    font-family: 'finition';
+    font-size: 6em;
+}
+
+#avatar {
+    width: 20%;
+}
+
