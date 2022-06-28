@@ -1,11 +1,11 @@
 @font-face {
     font-family: 'concert-one';
-    src: url(/fonts/ConcertOne-Regular.ttf);
+    src: url(\Portfolio\fonts\ConcertOne-Regular.ttf);
 }
 
 @font-face {
     font-family: 'finition';
-    src: url(/fonts/FinitionPersonalUseOnly-Brnx.ttf) format('truetype');
+    src: url(/Portfolio/fonts/FinitionPersonalUseOnly-Brnx.ttf) format('truetype');
 }
 
 @font-face {
