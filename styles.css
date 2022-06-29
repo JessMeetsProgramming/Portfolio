@@ -1,7 +1,7 @@
-@font-face {
+/*@font-face {
     font-family: 'concert-one';
     src: url(\Portfolio\fonts\ConcertOne-Regular.ttf) format('truetype');
-}
+}*/
 
 @font-face {
     font-family: 'finition';
@@ -18,17 +18,17 @@
     src: url(/Portfolio/fonts/Nunito-VariableFont_wght.ttf) format('truetype');
 }
 
-@font-face {
+/*@font-face {
     font-family: 'rubik-italic';
     src: url(/Portfolio/fonts/Rubik-Italic-VariableFont_wght.ttf) format('truetype');
-}
+}*/
 
 @font-face {
     font-family: 'rubik';
     src: url(/Portfolio/fonts/Rubik-VariableFont_wght.ttf) format('truetype');
 }
 
-@font-face {
+/*@font-face {
     font-family: 'rubik-moonrocks';
     src: url(/Portfolio/fonts/RubikMoonrocks-Regular.ttf) format('truetype');
 }
@@ -46,7 +46,7 @@
 @font-face {
     font-family: 'branda';
     src: url(/Portfolio/fonts/Branda-yolq.ttf) format('truetype');
-}
+}*/
 
 @font-face {
     font-family: 'hussar';
@@ -79,7 +79,7 @@
 }
 
 h1, p {
-    color:aliceblue;
+    color:#f0f8ff;
 }
 
 h1 {
@@ -94,7 +94,7 @@ p {
     margin: auto;
     text-align: center;
     line-height:1.5em;
-    color:aliceblue;
+    color:#f0f8ff;
     
     
 }
