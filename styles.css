@@ -91,10 +91,10 @@ div.section p {
     /*TODO potentially find font that has sharper edges than rubik but is still modern*/
     font-family: 'rubik', Verdana, sans-serif;
     width: 50%;
-    font-size: 1.2em;
+    font-size: 1.3em;
     margin: auto;
     text-align: center;
-    line-height:1.5em;
+    line-height:1.6em;
     color:#f0f8ff;
 }
 
