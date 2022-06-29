@@ -89,6 +89,7 @@ h1 {
 }
 
 p {
+    /*TODO potentially find font that has sharper edges than rubik but is still modern*/
     font-family: 'rubik', Verdana, sans-serif;
     width: 50%;
     font-size: 1.2em;
@@ -112,10 +113,11 @@ hr#two {
     border-radius: 18px 0;
 }
 
+/* </> characters - not all fonts include characters */
 span {
     font-family: 'finition', cursive; 
 }
 
-/*TODO media rules for mobile/tablets*/
+/*TODO media rules for mobile/tablets - incl smaller bg-img */
 
 
