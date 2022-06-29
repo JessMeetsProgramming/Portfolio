@@ -62,7 +62,7 @@
 /* will need to add more styling to ensure image is responsive etc.*/
 #intro {
     /* change this to a gradient image ??*/
-    background-image: url(images/redblue.jpg);
+    background-image: url(images/redblue.webp);
     background-size: cover;
 }
 
@@ -95,12 +95,10 @@ p {
     text-align: center;
     line-height:1.5em;
     color:#f0f8ff;
-    
-    
 }
 
 hr {
-    width: 50%;
+    width: 45%;
     border: 5px solid rgb(89, 193, 174);
     background-color: rgb(89, 193, 174);
 }
