@@ -87,8 +87,36 @@ h1 {
     font-size: 6em;
 }
 
+p {
+    /*font-family: 'rubik', Verdana, sans-serif;*/
+    width: 50%;
+    font-size: 1.2em;
+    margin: auto;
+    text-align: center;
+    line-height:1.5em;
+    color:aliceblue;
+    
+    
+}
+
+hr {
+    width: 50%;
+    border: 5px solid rgb(89, 193, 174);
+    background-color: rgb(89, 193, 174);
+}
+
+hr#one {
+    border-radius: 0 18px;
+}
+
+hr#two {
+    border-radius: 18px 0;
+}
+
 span {
     font-family: 'finition', cursive; 
 }
+
+/*TODO media rules for mobile/tablets*/
 
 
