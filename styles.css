@@ -12,10 +12,15 @@
     font-family: 'nunito-italic';
     src: url(/Portfolio/fonts/Nunito-Italic-VariableFont_wght.ttf) format('truetype');
 }
-
+/* very similar to rubik but slightly thinner, could be alternative*/
 @font-face {
     font-family: 'nunito';
     src: url(/Portfolio/fonts/Nunito-VariableFont_wght.ttf) format('truetype');
+}
+/* first choice for body font*/
+@font-face {
+    font-family: 'rubik';
+    src: url(/Portfolio/fonts/Rubik-VariableFont_wght.ttf) format('truetype');
 }
 
 /*@font-face {
@@ -23,10 +28,6 @@
     src: url(/Portfolio/fonts/Rubik-Italic-VariableFont_wght.ttf) format('truetype');
 }*/
 
-@font-face {
-    font-family: 'rubik';
-    src: url(/Portfolio/fonts/Rubik-VariableFont_wght.ttf) format('truetype');
-}
 
 /*@font-face {
     font-family: 'rubik-moonrocks';
@@ -88,7 +89,7 @@ h1 {
 }
 
 p {
-    /*font-family: 'rubik', Verdana, sans-serif;*/
+    font-family: 'rubik', Verdana, sans-serif;
     width: 50%;
     font-size: 1.2em;
     margin: auto;
