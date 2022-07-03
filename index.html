@@ -13,9 +13,12 @@
         <!-- css -->
         <link rel="stylesheet" type="text/css" href="dist/fullpage.css" />
         <link rel="stylesheet" href="styles.css" />
-        <!-- scripts -->
+        <!-- scripts -->        
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
         <script type="text/javascript" src="dist/fullpage.js"></script>
-        <script src="scripts.js"></script>
+        <script type="text/javascript" src="scripts.js"></script>
+
+
     </head>
 
     <body>
@@ -63,20 +66,43 @@
                 <p style="font-family:'branda';"> BLURB about me.</p>
                 <p style="font-family:'hussar';"> BLURB about me.</p>
             </div>
-            <div class="section">
+            <div class="section" id="project1">
                 <!-- TODO project 1 with explanation and link to website from images -->
                 <h1>Project One</h1>
+                <!-- main container of section-->
                 <div class="content">
+                    <!-- Text container -->
+                    <div class="description">
+                        <h2>DESCRIPTION</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec elementum maximus metus, ut euismod orci consectetur sit amet. Nulla sed volutpat odio. Proin feugiat, nulla rhoncus viverra ullamcorper, sapien nunc tristique leo, vitae luctus leo ipsum eu diam. Praesent porttitor nisl vitae diam varius, id tincidunt arcu scelerisque. Proin ut ornare erat, vel vehicula magna.</p>
+                    </div>
+                    <!-- Multimedia container -->
+                    <div class="examples">
+                        <!-- Image swap when clicked -->
+                        <!-- TODO resize images - optimise and change to webp or jpg -->
+                        <div id="desktop">
+                        <img data-src="images/haukaiHomeS.png" alt="Haukai Home Page" id="img1" class="images">
+                        <img data-src="images/haukaiMenu.png" alt="Haukai Menu Page" id="img2" class="images">
+                        <img data-src="images/haukaiReservations.png" alt="Haukai Reservations Page" id="img3" class="images">
+                        </div>
 
+                        <div id="mobile">
+                        <img data-src="images/haukaiHomeMob.png" alt="Haukai Home Mobile" id="img1" class="images" style="display:none;">
+                        <img data-src="images/haukaiMenuMob.png" alt="Haukai Menu Mobile" id="img2" class="images">
+                        <img data-src="images/haukaiResMob.png" alt="Haukai Reservations Mobile" id="img3" class="images">
+                        </div>
+                        <!-- TODO get google icons of desktop and mobile and make into show/hide buttons?-->
+                        <br><span id="icons"><img src="images/desktop.svg"> |<img src="images/mobile.svg"></span>
+                    </div>
                 </div>
 
             </div>
-            <div class="section">
+            <div class="section" id="project2">
                 <!-- project 2 -->
                 <h1>Project Two</h1>
 
             </div>
-            <div class="section">
+            <div class="section" id="project3">
                 <!-- project 3 -->
                 <h1>Project Three</h1>
             </div>
@@ -85,13 +111,16 @@
         <script>
             // initialise fullpage sections and define colors and other settings 
             new fullpage('#fullpage', {
+                licenseKey: 'gplv3-license',
                 sectionsColor: ['#00000f', '#555555', '#555555','#333333', '#031946', 'seagreen'],
                 navigation: true,                
                 navigationTooltips: ['Intro','Project 1','Project 2','Project 3','Project 4','Project 5'],
                 anchors: ['page1','page2','page3','page4','page5','page6'],
-                paddingTop: '15px',
-                paddingBottom: '15px',
-          });
+                paddingTop: '20px',
+                paddingBottom: '20px',
+                // remove scrolling within sections - fit everything to viewport with responsive sizing
+                //add lazyloading??
+            });
         
         </script>
 

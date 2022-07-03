@@ -93,6 +93,10 @@ div.section p {
     width: 50%;
     font-size: 1.3em;
     margin: auto;
+    /*margin-top: 8%;
+    margin-bottom: 8%;
+    margin-left: auto;
+    margin-right: auto;*/
     text-align: center;
     line-height:1.6em;
     color:#f0f8ff;
@@ -115,6 +119,54 @@ hr#two {
 /* </> characters - not all fonts include characters */
 span {
     font-family: 'finition', cursive; 
+}
+
+.description, .description p {
+    float:left;
+    text-align:left;
+    width: 60%;
+}
+
+.examples {
+    float:right;
+    margin-right:5%;
+}
+
+/* tilt animation */
+.examples img:hover {
+    animation-name: tilt;
+    animation-duration: 0.3s;
+    animation-timing-function: ease;
+}
+@keyframes tilt {
+    0% { transform: rotate(0deg); }
+    60% { transform: rotate(-2deg); }
+    95% { transform: rotate(1deg); }
+    100% { transform: rotate(0deg); }
+}
+
+img {
+    width: 450px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#img1 {
+    display: block;
+} 
+
+#img2, #img3 {
+    display: none;
+
+}
+
+#icons img {
+    width: 25px;
+}
+
+#icons {
+    font-size: 25px;
+    color: aliceblue;
 }
 
 /*TODO media rules for mobile/tablets - incl smaller bg-img */
