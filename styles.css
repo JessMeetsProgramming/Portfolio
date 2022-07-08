@@ -5,22 +5,22 @@
 
 @font-face {
     font-family: 'finition';
-    src: url(/Portfolio/fonts/FinitionPersonalUseOnly-Brnx.ttf) format('truetype');
+    src: url(fonts/FinitionPersonalUseOnly-Brnx.ttf) format('truetype');
 }
 
 @font-face {
     font-family: 'nunito-italic';
-    src: url(/Portfolio/fonts/Nunito-Italic-VariableFont_wght.ttf) format('truetype');
+    src: url(fonts/Nunito-Italic-VariableFont_wght.ttf) format('truetype');
 }
 /* very similar to rubik but slightly thinner, could be alternative*/
 @font-face {
     font-family: 'nunito';
-    src: url(/Portfolio/fonts/Nunito-VariableFont_wght.ttf) format('truetype');
+    src: url(fonts/Nunito-VariableFont_wght.ttf) format('truetype');
 }
 /* first choice for body font*/
 @font-face {
     font-family: 'rubik';
-    src: url(/Portfolio/fonts/Rubik-VariableFont_wght.ttf) format('truetype');
+    src: url(fonts/Rubik-VariableFont_wght.ttf) format('truetype');
 }
 
 /*@font-face {
@@ -51,12 +51,11 @@
 
 @font-face {
     font-family: 'hussar';
-    src: url(/Portfolio/fonts/HussarBoldWeb-bf92.woff) format('woff');
+    src: url(/fonts/HussarBoldWeb-bf92.woff) format('woff');
 }
 
-
-.section {
-    text-align: center;
+html {
+    font-size: 62.5%; /*root font size*/
 }
 
 /* will need to add more styling to ensure image is responsive etc.*/
@@ -78,28 +77,56 @@
     background-size: cover;
 }
 
-h1, p {
+.section {
+    /*text-align: center;*/
+    padding: 3%;
+    /*text-color*/
     color:#f0f8ff;
+}
+
+.content {
+    /* TODO do i need this container*/
+    border: solid 1px;
 }
 
 h1 {
+    text-align: center;
     font-family: 'finition','Brush Script MT', cursive;
-    font-size: 6em;
 }
 
-div.section p {
-    /*TODO potentially find font that has sharper edges than rubik but is still modern*/
-    font-family: 'rubik', Verdana, sans-serif;
-    width: 50%;
-    font-size: 1.3em;
+h2 {
+    font-family: 'Segoe UI'; /* TODO check serif fonts,'hussar', 'rubik', Verdana, sans-serif */
+    font-weight:lighter;
+    text-transform: uppercase;
+}
+
+p {
+    font-family: 'nunito', Verdana, sans-serif;
+    text-align: left;
+}
+
+a {
+    font-family: 'nunito', Verdana, sans-serif;
+}
+
+/* text container */
+#blurb {
+    /*TODO potentially find font that has sharper edges than rubik but is still modern font-family: 'rubik', Verdana, sans-serif;*/
+    width: 50%; /*TODO change this to columns or table or grid for responsive sizing*/
     margin: auto;
-    /*margin-top: 8%;
-    margin-bottom: 8%;
-    margin-left: auto;
-    margin-right: auto;*/
-    text-align: center;
-    line-height:1.6em;
-    color:#f0f8ff;
+}
+
+#blurb p {
+    font-family: 'rubik', Verdana, sans-serif;
+    text-align: center;    
+    line-height: 1.6em;
+}
+
+
+.description {
+    float:left;
+    /*text-align:left;*/
+    width: 40%;
 }
 
 hr {
@@ -121,15 +148,16 @@ span {
     font-family: 'finition', cursive; 
 }
 
-.description, .description p {
-    float:left;
-    text-align:left;
-    width: 60%;
-}
 
+/* image container*/
 .examples {
-    float:right;
+    float: right;
     margin-right:5%;
+    margin-right: 5%;
+    width: 450px;
+    max-height: 450px;
+    text-align: center;
+    border:solid 2px;
 }
 
 /* tilt animation */
@@ -145,19 +173,31 @@ span {
     100% { transform: rotate(0deg); }
 }
 
+/*image sizing*/
 img {
-    width: 450px;
+    max-width: 450px;
+    max-height: 350px;
     cursor: pointer;
     border-radius: 5px;
+    /*TODO center within the examples container*/
+
 }
 
-#img1 {
+.img0 {
     display: block;
 } 
 
-#img2, #img3 {
+.img1, .img2 {
     display: none;
+}
 
+div#mobile {
+    display: none;
+    width: fit-content;
+}
+
+div#desktop {
+    display: inline-block;
 }
 
 #icons img {
@@ -165,10 +205,110 @@ img {
 }
 
 #icons {
-    font-size: 25px;
+    font-size: 30px;
     color: aliceblue;
 }
 
-/*TODO media rules for mobile/tablets - incl smaller bg-img */
+/*TODO media queries for mobile/tablets - incl smaller bg-img */
 
+/* font-size: h1, h2, p, #blurb p, icons?*/
 
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    /* fonts */
+    h1 {
+        font-size: 22px;
+    }
+    h2 {
+        font-size: 2.2rem;
+    }
+    p {
+        font-size: 1.6rem;
+    }
+    #blurb p {
+        font-size: 1.6rem;
+    }
+    #icons {
+        font-size: 3rem;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+        /* fonts */
+    h1 {
+        font-size: 22px;
+    }
+    h2 {
+        font-size: 2.2rem;
+    }
+    p {
+        font-size: 1.6rem;
+    }
+    #blurb p {
+        font-size: 1.6rem;
+    }
+    #icons {
+        font-size: 3rem;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    /* fonts */
+    h1 {
+        font-size: 22px;
+    }
+    h2 {
+        font-size: 2.2rem;
+    }
+    p {
+        font-size: 1.6rem;
+    }
+    #blurb p {
+        font-size: 1.6rem;
+    }
+    #icons {
+        font-size: 3rem;
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    /* fonts */
+    h1 {
+        font-size: 2.3rem;
+    }
+    h2 {
+        font-size: 2.2rem;
+    }
+    p {
+        font-size: 1.6rem;
+    }
+    #blurb p {
+        font-size: 1.6rem;
+    }
+    #icons {
+        font-size: 3rem;
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    /* fonts */
+    h1 {
+        font-size: 2.3rem;
+    }
+    h2 {
+        font-size: 2.2rem;
+    }
+    p {
+        font-size: 1.6rem;
+    }
+    #blurb p {
+        font-size: 1.6rem;
+    }
+    #icons {
+        font-size: 3rem;
+    }
+}
