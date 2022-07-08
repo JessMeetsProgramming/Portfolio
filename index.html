@@ -14,7 +14,6 @@
         <link rel="stylesheet" type="text/css" href="dist/fullpage.css" />
         <link rel="stylesheet" href="styles.css" />
         <!-- scripts -->        
-        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
         <script type="text/javascript" src="dist/fullpage.js"></script>
         <script type="text/javascript" src="scripts.js"></script>
 
@@ -26,18 +25,21 @@
             <div class="section" id="intro">
                 <!-- intro section -->
                 <h1><span>&lt;/&gt;</span> Jess Greenwood</h1>
+                
                 <hr id="one">
                 </br>
-                <p>Recent graduate of web development.
-                    <br><em>Interested in back and front end development.</em>
-                    <br><strong>Eager to keep learning  and growing as a developer.</strong>
-                    <br><em>Looking for that first opportunity to build experience.</em>
-                    <br>Broad and basic knowledge in many languages.
-                </p>
+                <div id="blurb">
+                    <p>Recent graduate of web development.
+                        <br><em>Interested in back and front end development.</em>
+                        <br><strong>Eager to keep learning  and growing as a developer.</strong>
+                        <br><em>Looking for that first opportunity to build experience.</em>
+                        <br>Broad and basic knowledge in many languages.
+                    </p>                                  
+                </div>
                 </br>
-                <hr id="two"><br><br>               
-                
+                <hr id="two"><br><br> 
             </div>
+
             <div class="section" id="intro2">
                 <!-- intro section -->
                 <h1><span>&lt;/&gt;</span> Jess Greenwood</h1>
@@ -53,6 +55,7 @@
                 <hr id="two"><br><br>
                 
             </div>
+
             <div class="section" id="intro3">
                 <!-- intro section -->
                 <h1>&lt;/&gt; Jess Greenwood</h1>
@@ -66,37 +69,40 @@
                 <p style="font-family:'branda';"> BLURB about me.</p>
                 <p style="font-family:'hussar';"> BLURB about me.</p>
             </div>
+
             <div class="section" id="project1">
                 <!-- TODO project 1 with explanation and link to website from images -->
                 <h1>Project One</h1>
                 <!-- main container of section-->
                 <div class="content">
                     <!-- Text container -->
-                    <div class="description">
-                        <h2>DESCRIPTION</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec elementum maximus metus, ut euismod orci consectetur sit amet. Nulla sed volutpat odio. Proin feugiat, nulla rhoncus viverra ullamcorper, sapien nunc tristique leo, vitae luctus leo ipsum eu diam. Praesent porttitor nisl vitae diam varius, id tincidunt arcu scelerisque. Proin ut ornare erat, vel vehicula magna.</p>
+                    <div class="description" style="border:solid 2px;">
+                        <h2>The Haukai Restaurant</h2>
+                        <p>This website was a project for my studies - we were given a brief and were tasked with creating a restaurant website using HTML and CSS, I also found use for some Javascript. There was plenty of opportunity to be creative with this project as I was responsible for the design from conception through to completion, I played around with fonts, images and information architecture to display the relevant content. Responsive design and performance on slower networks were accounted for when considering the user experience as many customers would likely access the website from their mobile devices. Google APIs were implemented for dynamic content such as maps and forms. After completing the website we were asked to redo the website styling using a web framework to simplify code maintenance, I chose to use W3.CSS.   </p>
+                        <a href="https://blooming-plateau-23327.herokuapp.com/index.html" target="_blank">EXPLORE THE WEBSITE --> </a>
                     </div>
                     <!-- Multimedia container -->
                     <div class="examples">
                         <!-- Image swap when clicked -->
                         <!-- TODO resize images - optimise and change to webp or jpg -->
-                        <div id="desktop">
-                        <img data-src="images/haukaiHomeS.png" alt="Haukai Home Page" id="img1" class="images">
-                        <img data-src="images/haukaiMenu.png" alt="Haukai Menu Page" id="img2" class="images">
-                        <img data-src="images/haukaiReservations.png" alt="Haukai Reservations Page" id="img3" class="images">
+                        <div id="desktop" style="border:solid blue 1px;">
+                            <img data-src="images/haukaiHomeS.png" alt="Haukai Home Page" class="images img0">
+                            <img data-src="images/haukaiMenu.png" alt="Haukai Menu Page" class="images img1">
+                            <img data-src="images/haukaiReservations.png" alt="Haukai Reservations Page" class="images img2">
                         </div>
 
-                        <div id="mobile">
-                        <img data-src="images/haukaiHomeMob.png" alt="Haukai Home Mobile" id="img1" class="images" style="display:none;">
-                        <img data-src="images/haukaiMenuMob.png" alt="Haukai Menu Mobile" id="img2" class="images">
-                        <img data-src="images/haukaiResMob.png" alt="Haukai Reservations Mobile" id="img3" class="images">
+                        <div id="mobile" style="border:solid blue 1px;">
+                            <img data-src="images/haukaiHomeMob.png" alt="Haukai Home Mobile" class="images img0">
+                            <img data-src="images/haukaiMenuMob.png" alt="Haukai Menu Mobile" class="images img1">
+                            <img data-src="images/haukaiResMob.png" alt="Haukai Reservations Mobile" class="images img2">
                         </div>
-                        <!-- TODO get google icons of desktop and mobile and make into show/hide buttons?-->
-                        <br><span id="icons"><img src="images/desktop.svg"> |<img src="images/mobile.svg"></span>
+                        <!-- icon show/hide buttons-->
+                        <br><span id="icons" style="font-family:Verdana;"><img src="images/desktop.svg" id="pc"> | <img src="images/mobile.svg" id="mob"></span>
                     </div>
                 </div>
 
             </div>
+
             <div class="section" id="project2">
                 <!-- project 2 -->
                 <h1>Project Two</h1>
@@ -106,20 +112,26 @@
                 <!-- project 3 -->
                 <h1>Project Three</h1>
             </div>
+            
         </div>
 
         <script>
             // initialise fullpage sections and define colors and other settings 
             new fullpage('#fullpage', {
                 licenseKey: 'gplv3-license',
-                sectionsColor: ['#00000f', '#555555', '#555555','#333333', '#031946', 'seagreen'],
+                sectionsColor: ['#00000f', '#555555', '#333333','#333333', '#031946', 'seagreen'],
                 navigation: true,                
                 navigationTooltips: ['Intro','Project 1','Project 2','Project 3','Project 4','Project 5'],
                 anchors: ['page1','page2','page3','page4','page5','page6'],
-                paddingTop: '20px',
-                paddingBottom: '20px',
-                // remove scrolling within sections - fit everything to viewport with responsive sizing
-                //add lazyloading??
+                //paddingTop: '1em',
+                paddingBottom: '3em',
+                //autoScrolling: false,
+                //fitToSection: false,
+                //scrollBar: true,
+                scrollOverflow: false, // TODO removes scrolling within sections - make sure there is no content to overflow - different settings for mobile??
+                responsiveHeight: 600, //will add normal scrolling to sections/site when the browser height is less than 900
+                lazyloading: true,
+                credits: { enabled: true, label: 'Made with fullPage.js', position: 'right'},
             });
         
         </script>
