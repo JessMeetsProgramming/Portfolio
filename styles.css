@@ -1,139 +1,74 @@
-/*@font-face {
-    font-family: 'concert-one';
-    src: url(\Portfolio\fonts\ConcertOne-Regular.ttf) format('truetype');
-}*/
-
 @font-face {
     font-family: 'finition';
     src: url(fonts/FinitionPersonalUseOnly-Brnx.ttf) format('truetype');
 }
 
 @font-face {
-    font-family: 'nunito-italic';
-    src: url(fonts/Nunito-Italic-VariableFont_wght.ttf) format('truetype');
-}
-/* very similar to rubik but slightly thinner, could be alternative*/
-@font-face {
     font-family: 'nunito';
     src: url(fonts/Nunito-VariableFont_wght.ttf) format('truetype');
+    font-weight: 200; 
 }
-/* first choice for body font*/
 @font-face {
     font-family: 'rubik';
     src: url(fonts/Rubik-VariableFont_wght.ttf) format('truetype');
 }
-
-/*@font-face {
-    font-family: 'rubik-italic';
-    src: url(/Portfolio/fonts/Rubik-Italic-VariableFont_wght.ttf) format('truetype');
-}*/
-
-
-/*@font-face {
-    font-family: 'rubik-moonrocks';
-    src: url(/Portfolio/fonts/RubikMoonrocks-Regular.ttf) format('truetype');
-}
-
 @font-face {
-    font-family: 'smooch';
-    src: url(/Portfolio/fonts/Smooch-Regular.ttf) format('truetype');
+    font-family: 'volkhov';
+    src: url(fonts/Volkhov-Bold.ttf) format('truetype');
 }
-
-@font-face {
-    font-family: 'yellow-rabbit';
-    src: url(/Portfolio/fonts/YellowrabbitPersonaluse-qZYyd.otf) format('opentype');
-}
-
-@font-face {
-    font-family: 'branda';
-    src: url(/Portfolio/fonts/Branda-yolq.ttf) format('truetype');
-}*/
-
 @font-face {
     font-family: 'hussar';
-    src: url(/fonts/HussarBoldWeb-bf92.woff) format('woff');
+    src: url(fonts/HussarBoldWeb-bf92.woff) format('woff');
 }
 
+
+
+/* FONTS */
 html {
     font-size: 62.5%; /*root font size*/
-}
-
-/* will need to add more styling to ensure image is responsive etc.*/
-#intro {
-    /* change this to a gradient image ??*/
-    background-image: url(images/redblue.webp);
-    background-size: cover;
-}
-
-#intro2 {
-    /* change this to a gradient image ??*/
-    background-image: url(images/painting.jpg);
-    background-size: cover;
-}
-
-#intro3 {
-    /* change this to a gradient image ??*/
-    background-image: url(images/gradient2H.webp);
-    background-size: cover;
-}
-
-.section {
-    /*text-align: center;*/
-    padding: 3%;
-    /*text-color*/
-    color:#f0f8ff;
-}
-
-.content {
-    /* TODO do i need this container*/
-    border: solid 1px;
 }
 
 h1 {
     text-align: center;
     font-family: 'finition','Brush Script MT', cursive;
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+/* </> characters - not all fonts include characters */
+span {
+    font-family: 'finition', cursive; 
 }
 
 h2 {
-    font-family: 'Segoe UI'; /* TODO check serif fonts,'hussar', 'rubik', Verdana, sans-serif */
-    font-weight: lighter;
+    font-family: 'volkhov', 'hussar', Garamond, serif; 
     text-transform: uppercase;
+    color: khaki;
 }
 
-p {
-    font-family: 'nunito', Verdana, sans-serif;
+p, a {
+    font-family: 'nunito', Helvetica, sans-serif;
     text-align: left;
-}
-
-a {
-    font-family: 'nunito', Verdana, sans-serif;
-}
-
-/* text container */
-#blurb {
-    width: 50%; 
-    margin: auto;
-    margin-top:0px; /*TODO may need to change margins to suit device sizes*/
-    margin-bottom:0px;
+    color:aliceblue;
 }
 
 #blurb p {
-    font-family: 'rubik', Verdana, sans-serif;
+    font-family: 'rubik', Tahoma, sans-serif;
     text-align: center;    
     line-height: 1.6em;
+    color: aliceblue;
 }
 
 
-.description {
-    float:left;
-    /*text-align:left;*/
-    width: 40%;
+/* Background image */
+#intro {
+    background-image: url(images/redblue.webp);
+    background-size: cover;
 }
 
+/* decorative lines*/
 hr {
-    width: 45%;
+    width: 65%;
     border: 5px solid rgb(89, 193, 174);
     background-color: rgb(89, 193, 174);
 }
@@ -146,25 +81,130 @@ hr#two {
     border-radius: 18px 0;
 }
 
-/* </> characters - not all fonts include characters */
-span {
-    font-family: 'finition', cursive; 
+/* DIVS */
+
+/*full size of viewport*/
+.section {
+    padding: 10% 3%;
+    color:#f0f8ff;
 }
 
+/* intro page text container */
+#blurb {
+    width: 60%;
+    margin: auto;
+    margin-top:0px; 
+    margin-bottom:0px;
+}
 
-/* image container*/
+/* project pages content box*/
+.content {
+    margin: 0% 5% 5% 5%;
+    display: flex;
+    flex-direction: row;    
+    max-width: 90%;
+    max-height: 70%;
+    justify-content: space-between;
+    align-items: center; /*TODO check this in larger displays*/
+}
+
+/* project pages text container */
+.description {
+    float: left;
+    margin-right: 5%;
+    flex-basis: 70%;
+    flex-shrink: 1;
+    flex-grow: 1;
+    max-height:100%;
+}
+
+#description2 {
+    /*margin-right: 0;
+    margin-left: 7%;*/
+    float: right;
+}
+#examples2 {
+    float: left;
+}
+
+/* image container */
 .examples {
     float: right;
-    margin-right:5%;
-    margin-right: 5%;
-    width: 450px;
-    max-height: 450px;
+    align-self: center;
     text-align: center;
-    border:solid 2px;
+    flex-basis: 70%;
+    flex-shrink: 2;
+    flex-grow: 2;
+    max-height: 100%;
+}
+/* image containers*/
+div#mobile {
+    display: none; 
+    width: fit-content;
+    max-height: 100%; 
+}
+div#desktop {
+    display: inline-block; 
 }
 
-/* tilt animation */
-.examples img:hover {
+/*TODO delete borders
+.description, .content {
+    border: solid white 1px;
+} 
+div#mobile,div#desktop {
+    border: solid red 1px;
+}
+.examples{
+    border: solid yellow 2px;
+}*/
+
+/*img styling*/
+.images img, video {
+    cursor: pointer;
+    border-radius: 5px;   
+}
+#breakout {
+    border-radius: 5px;
+    align-self: center;
+    height: 100%;
+    width: 250px;
+}
+/*desktop image sizing*/
+div#desktop .images img, video {
+    width: 100%;
+    height: auto;
+    /*object-fit: contain; scale up or down according to parent container*/
+}
+/*mobile image sizing*/
+div#mobile .images img {
+    height: 100%;
+    width: auto;
+    /* object-fit: contain; scale up or down according to parent container*/
+}
+
+/* hide/show images */
+.img0, .img1, .img2 {
+    display: none;
+}
+.activeImg {
+    display: block;
+}
+
+/* icons container*/
+#icons {
+    font-size: 40px;
+    font-family: 'nunito', Helvetica, sans-serif;
+    color: aliceblue;
+    cursor: pointer;
+}
+
+/* slide nav*/
+.nav-arrows img {
+    display: none;
+}
+
+/* img tilt animation */
+#examples img:hover {
     animation-name: tilt;
     animation-duration: 0.3s;
     animation-timing-function: ease;
@@ -176,74 +216,11 @@ span {
     100% { transform: rotate(0deg); }
 }
 
-/*image sizing*/
-img {
-    max-width: 450px;
-    max-height: 350px;
-    cursor: pointer;
-    border-radius: 5px;
-    /*TODO center within the examples container*/
 
-}
+/*********************    MEDIA QUERIES    ************************/
 
-.img0 {
-    display: block;
-} 
-
-.img1, .img2 {
-    display: none;
-}
-
-div#mobile {
-    display: none;
-    width: fit-content;
-}
-
-div#desktop {
-    display: inline-block;
-}
-
-#icons img {
-    width: 25px;
-}
-
-#icons {
-    font-size: 30px;
-    color: aliceblue;
-}
-
-/*TODO media queries for mobile/tablets - incl smaller bg-img */
-
-/* font-size: h1, h2, p, #blurb p, icons?*/
-
-/* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {
-    /* fonts */
-    h1 {
-        font-size: 3.8rem;
-        font-weight: lighter;
-        margin-bottom: 15px;
-    }
-    h2 {
-        font-size: 2.2rem;
-    }
-    p {
-        font-size: 1.6rem;
-    }
-    #blurb p {
-        font-size: 1.3rem;
-    }
-    #icons {
-        font-size: 3rem;
-    }
-    /* formatting*/
-    hr {
-        width: 80%;
-        border: 3px solid rgb(89, 193, 174);
-    }
-    #blurb {
-        width: 85%;
-    }
+/* Change image size and navigation icons for small devices */
+@media only screen and (max-width:600px) {
     #fp-nav.fp-right {
         right: 0px; /* nav span */
     }
@@ -257,86 +234,496 @@ div#desktop {
     }
     #intro {
         background-image: url(images/redblueV.webp);
-        background-size: auto;/*cover*/
+        background-size: auto;
+    }
+    /*.section {
+        padding: 3% 3%;
+    }*/
+    div#mobile .images img {
+        height: px;
     }
 }
 
-/* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {
-        /* fonts */
-    h1 {
-        font-size: 7rem;
+
+/* Small devices (landscape mode) */ 
+@media only screen and (max-height:320px) and (orientation:landscape) {
+    /* fonts */
+    h1, .projects h1 {
+        font-size: 3.5rem !important; /*4.6*/
+        margin-bottom: 0px !important;/*6*/
+        font-weight: lighter;
+        margin-top: 5px !important;
     }
     h2 {
-        font-size: 2.2rem;
+        font-size: 1.3rem !important;
+        /*margin-top: 25px;*/
     }
-    p {
-        font-size: 1.6rem;
+    p, a {
+        font-size: 1.2rem !important;
+        margin-block-start: 0em;
+        margin-block-end: 0.5em;
     }
     #blurb p {
-        font-size: 1.8rem;
+        font-size: 1.3rem !important;
     }
-    #icons {
-        font-size: 3rem;
+    div#desktop .images img, video {
+        width: 300px;
+    }
+    .description {
+        width: 95% !important;
+    }
+    /* nav span 
+    #fp-nav.fp-right {
+        right: 5px; 
+    }
+    #fp-nav ul li a.active span,
+    .fp-slidesNav ul li a.active span,
+    #fp-nav ul li:hover a.active span,
+    .fp-slidesNav ul li:hover a.active span {
+        height: 10px;
+        width: 10px;
+        margin: -5px 0 0 -5px;
+    }*/
+}
+
+/* Extra small devices (phones) */ 
+@media only screen and (max-width: 350px) {
+    h1 {
+        font-size: 4.2rem !important; 
+        font-weight: lighter;
+        margin-bottom: 15px;
+        margin-block-start: 0;
+    }
+    .projects h1 {
+        margin-bottom: 10px !important;
+    }
+    h2, a {
+        font-size: 1.6rem !important;
+    }
+    p {
+        font-size: 1.3rem !important;
+    }
+    #blurb p {
+        font-size: 1.3rem !important;
+    }
+    /* formatting*/
+    hr {
+        width: 80% !important;
+        border: 3px solid rgb(89, 193, 174) !important;
+    }
+    #blurb {
+        width: 85% !important;
+    }
+    div#mobile .images img {
+        height: px;
+    }
+
+}
+
+/* Small devices (tablets - 768px and down) */
+@media only screen and (max-width: 768px) and (min-height:540px) and (max-height:800px) {
+    /* fonts */
+    h1 {
+        font-size: 5rem; 
+        margin-bottom: 15px;
+    }
+    .projects h1{
+        margin-top: 15px;
+        margin-bottom: 15px; /*TODO 40px*/
+    }
+    h2, a {
+        font-size: 1.8rem;
+        text-align: center;
+    }
+    p {
+        font-size: 1.4rem;
+    }
+    #blurb p {
+        font-size: 1.6rem;
+    }
+    /* formatting */
+    hr {
+        width: 70%;
+        border: 4px solid rgb(89, 193, 174);
+    }
+    #blurb {
+        width: 70%;
+    }
+
+    /* formatting for divs */  
+    .section {
+        padding: 7% 3%;
+    }    
+    .projects.fp-table {
+        justify-content: flex-start;
+    }    
+    .content {
+        flex-direction: column;
+        margin-bottom:0;
+        max-width: 90%;
+        height: 90%; /* TODO 80 --- change to height of content */
+        text-align: center;
+    }
+    .slides {
+        position: absolute;
+        width: 84%;
+        height: auto;
+    }
+    .description {
+        float: none;
+        margin-right: 0;
+        width: 84% !important; /* accounting for padding/margins */ 
+        transform: translateX(0);
+        z-index: 1;
+        transition-duration: .4s;
+    }
+    /*#description1 {
+        margin-top: -25px;
+    }*/
+    #description1 {
+        margin-top: 0px;
+    }
+    .examples {
+        float: none;
+        transform: translateX(116%);   
+        z-index: 1;
+        transition-duration: .4s;
+        max-height: inherit; 
+    }    
+
+    /* slide navs (horizontal) */
+    .nav-arrows img {
+        position: absolute;     
+        display: inline-block;
+        bottom: 2%;
+        width: 50px;
+        z-index: 1;            
+        cursor: pointer;    
+    }    
+    .nav-left {
+        opacity: 0;     
+        left: 1%;
+    }
+    .nav-right { 
+        right: 1%; 
+    }
+    #nav-right3, #nav-left3 {
+        bottom: 6%; /*5*/
+    }
+
+
+    /* multimedia sizing 
+    #breakout {
+        width: 250px;
+    }*/
+    div#mobile .images img {
+        height: 340px;
     }
 }
+
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
     /* fonts */
     h1 {
-        font-size: 7rem;
+        font-size: 6.4rem; 
+        margin-bottom: 25px;
     }
-    h2 {
-        font-size: 2.2rem;
+    h2, a {
+        font-size: 2rem;
     }
     p {
-        font-size: 1.6rem;
+        font-size: 1.5rem;
     }
     #blurb p {
-        font-size: 1.8rem;
+        font-size: 1.6rem;
     }
-    #icons {
-        font-size: 3rem;
+    .section {
+        padding: 5% 3%;
     }
+    #breakout {
+        width: 250px;
+    }
+    div#mobile .images img {
+        height: px;
+    }
+
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
     /* fonts */
     h1 {
-        font-size: 7rem;
+        font-size: 7.4rem;
+        margin-bottom: 30px;
     }
-    h2 {
-        font-size: 2.2rem;
+    .projects h1 {
+        font-size: 7.2rem;
+        margin-bottom: 20px;
+        margin-top: 20px;
+    }
+    h2, a {
+        font-size: 2rem;
     }
     p {
-        font-size: 1.6rem;
+        font-size: 1.5rem;
     }
     #blurb p {
-        font-size: 1.8rem;
+        font-size: 2.4rem;
     }
-    #icons {
-        font-size: 3rem;
+    /*formatting*/
+    div#mobile .images img, #breakout {
+        height: 350px;
+        width: auto;
+        margin-top: 20px;
     }
+    .section {
+        padding: 2% 3%;
+    }
+    #description2 {
+        margin-right: 0;
+        margin-left: 7%;
+    }
+    .content {
+        align-items: flex-start;
+        margin-top: 5%;
+    }
+    div#desktop {
+        margin-top: 50px;
+    }
+
 }
 
-/* Extra large devices (large laptops and desktops, 1200px and up) */
+/* Extra large devices (large laptops and desktops, 1200px and up), large tablets in portrait mode */
 @media only screen and (min-width: 1200px) {
     /* fonts */
     h1 {
-        font-size: 7rem;
+        font-size: 8rem;
+        margin-bottom: 40px;
     }
-    h2 {
+    h2, a {
         font-size: 2.2rem;
     }
     p {
-        font-size: 1.6rem;
+        font-size: 1.7rem;
     }
     #blurb p {
-        font-size: 1.8rem;
+        font-size: 2.4rem;
     }
+    hr {
+        width: 55%;
+    }
+    /*div#mobile .images img {
+        height: px;
+    }*/
+}
+
+@media only screen and (min-width: 768px) and (orientation: portrait) {
+    /* fonts */
+    h1 {
+        font-size: 8rem;
+        margin-bottom: 30px;
+    }
+    h2, a {
+        font-size: 2.2rem;
+        text-align: center;
+    }
+    p {
+        font-size: 1.7rem;
+    }
+    #blurb p {
+        font-size: 2.4rem;
+    }
+    hr {
+        width: 55%;
+    }
+    /* layout */
+    .content {
+        flex-direction: column;
+        max-height: 90%;
+    }
+    .description {
+        margin-right: 0;
+    }
+    .examples {
+        margin-top: 60px; /* TODO 50-60 preferable for ipadAir - had 30 (not sure what for) */ 
+    }
+    #examples2, #description2 {
+        margin-bottom: 30px;
+    }
+    div#desktop .images img, video {
+        width: 520px;
+    }
+    div#mobile .images img {
+        height: 380px; /*360*/
+    }
+}
+
+/* tall phones */
+@media only screen and (max-width: 450px) and (min-height:800px) and (max-height: 920px) and (orientation:portrait) {
+    h1 {
+        font-weight:lighter;
+        font-size: 4.5rem;
+        margin-top: 0;
+        margin-bottom: 20px;
+    }
+    #blurb p, h2, a {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+    p {
+        font-size: 1.3rem;
+    }
+    .section {
+        padding: 2% 3%;
+    }
+    .content {
+        margin-bottom: 0;
+        flex-direction: column;
+        max-height: 85%;
+        justify-content:center;
+    }
+    .examples {
+        margin-top: 40px;
+    }
+    #examples2, #description2 {
+        margin-top:15px;
+    }
+    .description {
+        margin-right: 0;
+    }
+    div#mobile .images img {
+        height: 250px;
+    }
+    
+}
+
+/* landscape phones and tablets */
+@media only screen and (max-width:920px) and (max-height:540px) and (orientation:landscape) {
+    /*fonts*/
+    h1 {  /*TODO added*/
+        font-size: 5rem; 
+    }
+    .projects h1 {
+        margin-bottom: 15px;  
+        margin-top:15px;/* TODO added*/
+        font-size: 4.5rem;
+    }   
+    /*#project3 h1 {
+        margin-bottom: 0px;
+    } */
+    #project1 h2 {
+        margin-top: 20px;
+    }
+    h2, a {
+        font-size: 1.5rem;
+    }
+    p {
+        font-size: 1.3rem;
+    }
+
+    /* formatting for divs */
+    .section {
+        padding: 1% 3%;
+    }
+    .projects.fp-table {
+        justify-content: flex-start;
+    }
+    .content {
+        margin-bottom:0;
+        margin-left:0;
+        margin-right:0;
+        flex-direction: column;
+        max-width: 100%;
+        height: 80%; /* change to height of content */
+        text-align: center;
+        justify-content: center; /* TODO added */
+    }    
+    .slides {
+        position: absolute;
+        width: 100%;/*90%;*/
+        height: auto;
+    }
+    .description {
+        float: none;
+        margin-left: 2%;
+        margin-right: 2%;
+        width: 90% !important;
+        transform: translateX(0);
+        z-index: 1;
+        transition-duration: .4s;
+    }
+    /*#description3 {
+        margin-top: 20px;
+    }*/
+    .examples {
+        float: none;
+        transform: translateX(116%); 
+        z-index: 1;
+        transition-duration: .4s;
+        max-height:inherit; 
+        width: 94%;
+        margin-top: 15px;
+    } 
+
+    /* slide navs (horizontal) */       
+    .nav-arrows img {
+        position: absolute;     
+        display: inline-block;
+        bottom: 2%;
+        width: 45px;
+        z-index: 1;            
+        cursor: pointer;    
+    }    
+    .nav-left {
+        opacity: 0;     
+        left: 0%; 
+    }
+    .nav-right { 
+        right: 0%; 
+    }
+    #nav-right3, #nav-left3 {
+        bottom: 2%;
+    }
+
+
+    /* multimedia */
     #icons {
-        font-size: 3rem;
+        display: none; /*only display desktop images */
+    }
+    video {
+        width: 450px;
+    }
+    #breakout {
+        width: 200px;
+    }
+    /*TODO taken from other media q 
+    #breakout {
+        width: 250px;
+    }*/
+    div#mobile .images img {
+        height: 340px;
+    }
+    #description1 {
+        margin-top: -25px;
+    }
+
+ /**/
+    /* fullpage.js credit */
+    .fp-watermark {
+        right: 5% !important;
+    }
+
+    /* fullpage.js nav span - decrease size for smaller devices*/
+    #fp-nav.fp-right {
+        right: 5px; 
+    }
+    #fp-nav ul li a.active span,
+    .fp-slidesNav ul li a.active span,
+    #fp-nav ul li:hover a.active span,
+    .fp-slidesNav ul li:hover a.active span {
+        height: 10px;
+        width: 10px;
+        margin: -5px 0 0 -5px;
     }
 }

@@ -22,8 +22,9 @@
 
     <body>
         <div id="fullpage">
+            <!-- INTRO section -->
             <div class="section" id="intro">
-                <!-- intro section -->
+                
                 <h1><span>&lt;/&gt;</span> Jess Greenwood</h1>
                 
                 <hr id="one">
@@ -38,95 +39,138 @@
                 <hr id="two"><br><br> 
             </div>
 
-            <div class="section" id="intro2">
-                <!-- intro section -->
-                <h1><span>&lt;/&gt;</span> Jess Greenwood</h1>
-                <hr id="one">
-                </br>
-                <p>Recent graduate of web development.
-                    <br><em>Interested in back and front end development.</em>
-                    <br><strong>Eager to keep learning  and growing as a developer.</strong>
-                    <br><em>Looking for that first opportunity to build experience.</em>
-                    <br>Broad and basic knowledge in many languages.
-                </p>
-                </br>
-                <hr id="two"><br><br>
-                
+            <!-- ************** NEW SECTION ***************************** -->
+            <div class="section projects" id="project1"> 
+            <h1>Project One</h1>
+            <!-- main container of section-->
+            <div class="content">
+                <!-- Text container -->
+                <div class="slides description" id="description1">
+                    <h2>Waipukurau Pizzeria</h2>
+                    <p>The Waipukurau website was a project for my studies, it was primarily focused on the back-end database design. I started with designing the front-end HTML pages with the forms that would provide the basis for the CRUD system - which included booking and ordering pages. These pages were integrated with an existing database using PHP and MySQL. A simple user access system was added using PHP sessions to control admin vs customer access to pages and to allow users to create accounts and manage their orders and bookings.</p><p>Form validation was written in PHP before making any queries to the database and prepared statements were used to prevent any potential SQL injection attacks. Extensive testing was performed on all the database functions, I used Selenium IDE to create test suites to automate the process for maintenance purposes. We were provided with all the assets and a template for the design of this website, so it was just a matter of integrating the database pages and making sure the styling matched up.    
+                    </p>
+                    <a href="http://waipukuraupizzeria.infinityfreeapp.com/" target="_blank">EXPLORE THE WEBSITE --> </a>
+                </div>
+                <!-- Multimedia container -->
+                <div class="slides examples" id="examples1">
+
+                    <!--img src="images/Pizzeria.gif"/-->
+                    <video data-src="images/Pizzeria.mp4" type="video/mp4" autoplay muted controls poster="images/PizzeriaHomeS.png" id="video"></video>
+                    
+                </div> <!-- end of EXAMPLES-->
+                <!-- Navigation icons -->
+                <span class="nav-arrows"><img src="images/arrow_left.svg" id="nav-left1" class="nav-left"><img src="images/arrow_right.svg" id="nav-right1" class="nav-right"></span>
+            </div> <!-- end of CONTENT -->  
             </div>
 
-            <div class="section" id="intro3">
-                <!-- intro section -->
-                <h1>&lt;/&gt; Jess Greenwood</h1>
-                <p style="font-family:'concert-one';"> BLURB about me.</p>
-                <p style="font-family:'nunito';"> BLURB about me.</p>
-                <p style="font-family:'nunito-italic';"> BLURB about me.</p>
-                <p style="font-family:'rubik';"> BLURB about me.</p>
-                <p style="font-family:'rubik-italic';"> BLURB about me.</p>
-                <p style="font-family:'smooch';"> BLURB about me.</p>
-                <p style="font-family:'yellow-rabbit';"> BLURB about me.</p>
-                <p style="font-family:'branda';"> BLURB about me.</p>
-                <p style="font-family:'hussar';"> BLURB about me.</p>
-            </div>
+            <!-- ************** NEW SECTION ***************************** -->
+            <div class="section projects" id="project2">
+                <h1>Project Two</h1>
+                <!-- main container of section-->
+                <div class="content"><!-- Multimedia container -->
+                        <div class="slides examples" id="examples2">
+                        <!-- Desktop website images - image swap when clicked -->
+                        <div id="desktop">
+                            <picture class="images desktop img0 activeImg">
+                                <source srcset="images/haukaiHomeXS.png" media="(max-width:992px)" type="image/png">
+                                <source srcset="images/haukaiHomeS.png" media="(max-width:1400px)" type="image/png">
+                                <source srcset="images/haukaiHomeL.png" media="(min-width:1400px)" type="image/png">
+                                <!--Fallback img-->
+                                <img data-src="images/haukaiHomeS.png" alt="Haukai Home Page">
+                            </picture> 
+                            <picture class="images desktop img1">
+                                <source srcset="images/haukaiMenuXS.png" media="(max-width:992px)" type="image/png">
+                                <source srcset="images/haukaiMenuS.png" media="(max-width:1400px)" type="image/png">
+                                <source srcset="images/haukaiMenuL.png" media="(min-width:1400px)" type="image/png">
+                                <!--Fallback img-->
+                                <img data-src="images/haukaiMenuS.png" alt="Haukai Menu Page">
+                            </picture> 
+                            <picture class="images desktop img2">
+                                <source srcset="images/haukaiReservationsXS.png" media="(max-width:992px)" type="image/png">
+                                <source srcset="images/haukaiReservationsS.png" media="(max-width:1400px)" type="image/png">
+                                <source srcset="images/haukaiReservationsL.png" media="(min-width:1400px)" type="image/png">
+                                <!--Fallback img-->
+                                <img data-src="images/haukaiReservationsS.png" alt="Haukai Reservations Page">
+                            </picture>  
+                        </div>
 
-            <div class="section" id="project1">
-                <!-- TODO project 1 with explanation and link to website from images -->
-                <h1>Project One</h1>
+                        <!-- Mobile website images -->
+                        <div id="mobile">
+                            <picture class="images mobile img0"> 
+                                <source srcset="images/haukaiHomeMobXS.png" media="(max-width:600px)">
+                                <source srcset="images/haukaiHomeMobS.png" media="(max-width:1400px)" type="image/png">
+                                <source srcset="images/haukaiHomeMob.png" media="(min-width:1400px)" type="image/png">
+                                <!--fallback image-->
+                                <img data-src="images/haukaiHomeMob.png" alt="Haukai Home Mobile">
+                            </picture>   
+                            <picture class="images mobile img1">
+                                <source srcset="images/haukaiMenuMobXS.png" media="(max-width:600px)">
+                                <source srcset="images/haukaiMenuMobS.png" media="(max-width:1400px)" type="image/png">
+                                <source srcset="images/haukaiMenuMob.png" media="(min-width:1400px)" type="image/png">
+                                <img data-src="images/haukaiMenuMob.png" alt="Haukai Menu Mobile">
+                            </picture>
+                            <picture class="images mobile img2">
+                                <source srcset="images/haukaiResMobXS.png" media="(max-width:600px)">
+                                <source srcset="images/haukaiResMobS.png" media="(max-width:1400px)" type="image/png">
+                                <source srcset="images/haukaiResMob.png" media="(min-width:1400px)" type="image/png">
+                                <img data-src="images/haukaiResMob.png" alt="Haukai Reservations Mobile">
+                            </picture>
+                            
+                        </div>
+                        <!-- icon show/hide buttons-->
+                        <br><span id="icons"><img src="images/desktop.svg" id="pc"> | <img src="images/mobile.svg" id="mob"></span>
+
+                    </div> <!-- end of EXAMPLES-->
+                    <!-- Text container -->
+                    <div class="slides description" id="description2">
+                        <h2>The Haukai Restaurant</h2>
+                        <p>Haukai was also an assignment, continuing in the restaurant theme - we were given a brief and were tasked with creating a website using HTML and CSS, I also found use for some Javascript. There was plenty of opportunity to be creative with this project as I was responsible for the design from conception through to completion, I played around with fonts, images and information architecture to display the relevant content.</p><p>Responsive design and performance on slower networks were accounted for when considering the user experience, as many customers would likely access the website from their mobile devices. Google APIs were implemented for dynamic content such as maps and forms. After completing the website we were asked to redo the website styling using a web framework to simplify code maintenance, the website is currently styled using W3.CSS.   
+                        </p>
+                        <a href="https://blooming-plateau-23327.herokuapp.com/index.html" target="_blank">EXPLORE THE WEBSITE --> </a>
+                    </div>
+                    
+                    <span class="nav-arrows"><img src="images/arrow_left.svg" id="nav-left2" class="nav-left"><img src="images/arrow_right.svg" id="nav-right2" class="nav-right"></span>
+                </div> <!-- end of CONTENT -->  
+            </div> <!-- end of SECTION -->
+
+            <!-- ************** NEW SECTION ***************************** -->
+            <div class="section projects" id="project3">
+                <!-- project 2 -->
+                <h1>Other Projects</h1>
                 <!-- main container of section-->
                 <div class="content">
                     <!-- Text container -->
-                    <div class="description" style="border:solid 2px;">
-                        <h2>The Haukai Restaurant</h2>
-                        <p>This website was a project for my studies - we were given a brief and were tasked with creating a restaurant website using HTML and CSS, I also found use for some Javascript. There was plenty of opportunity to be creative with this project as I was responsible for the design from conception through to completion, I played around with fonts, images and information architecture to display the relevant content. Responsive design and performance on slower networks were accounted for when considering the user experience as many customers would likely access the website from their mobile devices. Google APIs were implemented for dynamic content such as maps and forms. After completing the website we were asked to redo the website styling using a web framework to simplify code maintenance, I chose to use W3.CSS.   </p>
-                        <a href="https://blooming-plateau-23327.herokuapp.com/index.html" target="_blank">EXPLORE THE WEBSITE --> </a>
+                    <div class="slides description" id="description3">
+                        <h2>Java and More Programming</h2>
+                        <p>I also have a sound knowledge in programming languages and concepts to form a good foundation for further learning in web development and other areas of programming. I mostly worked on Java projects such as tictactoe, breakout and a student report system where object-oriented programming was applied. For a group project we designed a gym membership app prototype with Windows Forms and then individually coded with C# and SQL. We were also introduced to Python and asked to convert a previous Java menu of math functions to a working Python program.</p>
                     </div>
-                    <!-- Multimedia container -->
-                    <div class="examples">
-                        <!-- Image swap when clicked -->
-                        <!-- TODO resize images - optimise and change to webp or jpg -->
-                        <div id="desktop" style="border:solid blue 1px;">
-                            <img data-src="images/haukaiHomeS.png" alt="Haukai Home Page" class="images img0">
-                            <img data-src="images/haukaiMenu.png" alt="Haukai Menu Page" class="images img1">
-                            <img data-src="images/haukaiReservations.png" alt="Haukai Reservations Page" class="images img2">
-                        </div>
-
-                        <div id="mobile" style="border:solid blue 1px;">
-                            <img data-src="images/haukaiHomeMob.png" alt="Haukai Home Mobile" class="images img0">
-                            <img data-src="images/haukaiMenuMob.png" alt="Haukai Menu Mobile" class="images img1">
-                            <img data-src="images/haukaiResMob.png" alt="Haukai Reservations Mobile" class="images img2">
-                        </div>
-                        <!-- icon show/hide buttons-->
-                        <br><span id="icons" style="font-family:Verdana;"><img src="images/desktop.svg" id="pc"> | <img src="images/mobile.svg" id="mob"></span>
+                    <!-- Multimedia container-->
+                    <div class="slides examples" id="examples3"> 
+                        <img src="images/Breakout2.gif" class="images" id="breakout"> 
                     </div>
-                </div>
 
+                    <span class="nav-arrows"><img src="images/arrow_left.svg" id="nav-left3" class="nav-left"><img src="images/arrow_right.svg" id="nav-right3" class="nav-right"></span>
+                </div><!-- end of CONTENT-->
             </div>
 
-            <div class="section" id="project2">
-                <!-- project 2 -->
-                <h1>Project Two</h1>
-
-            </div>
-            <div class="section" id="project3">
-                <!-- project 3 -->
-                <h1>Project Three</h1>
-            </div>
             
-        </div>
+        </div> <!-- end of FULLPAGE wrapper -->
+
 
         <script>
             // initialise fullpage sections and define colors and other settings 
             new fullpage('#fullpage', {
                 licenseKey: 'gplv3-license',
-                sectionsColor: ['#00000f', '#555555', '#333333','#333333', '#031946', 'seagreen'],
+                sectionsColor: ['#00000f', '#07395f','#417F73', '#414066'], // #585582 - alt purple (brighter)
                 navigation: true,                
-                navigationTooltips: ['Intro','Project 1','Project 2','Project 3','Project 4','Project 5'],
-                anchors: ['page1','page2','page3','page4','page5','page6'],
-                paddingTop: '3em',
-                paddingBottom: '3em',
+                navigationTooltips: ['Intro','Project 1','Project 2','Other'],
+                anchors: ['page1','page2','page3','page4'],
+                //paddingTop: '3em',
+                //paddingBottom: '3em',
                 //autoScrolling: false,
                 //fitToSection: false,
                 //scrollBar: true,
-                scrollOverflow: false, // TODO removes scrolling within sections - make sure there is no content to overflow - different settings for mobile??
+                //scrollOverflow: false,  TODO removes scrolling within sections - make sure there is no content to overflow - different settings for mobile??
                 //responsiveHeight: 600, //will add normal scrolling to sections/site when the browser height is less than 900
                 lazyloading: true,
                 credits: { enabled: true, label: 'Made with fullPage.js', position: 'right'},
