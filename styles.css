@@ -300,10 +300,10 @@ div#mobile .images img {
         text-align: center;
     }
     p {
-        font-size: 1.4rem;
+        font-size: 1.6rem;
     }
     #blurb p {
-        font-size: 1.6rem;
+        font-size: 1.8rem;
     }
     /*formatting*/
     #intro {
@@ -419,7 +419,7 @@ div#mobile .images img {
 }
 
 
-/* Medium devices (landscape tablets, 768px and up) */ /*TODO notes - ipad air, mini, surface pro 7 */
+/* Medium devices (portrait tablets, 768px and up) */ /*TODO notes - ipad air, mini, surface pro 7 */
 @media only screen and (min-width: 768px) and (orientation: portrait) {
     /* fonts */
     h1 {
@@ -471,7 +471,7 @@ div#mobile .images img {
 
 }
 
-/* Large devices (laptops/desktops, 992px and up) */
+/* Large devices (laptops/desktops, 992px and up) */ /* TODO my laptop */
 @media only screen and (min-width: 992px) {
     /* fonts */
     h1 {
