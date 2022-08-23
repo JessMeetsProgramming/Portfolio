@@ -63,7 +63,7 @@ window.onload = function() {
 
 
     /* ---------change layout to horizontal slides for small devices------------ */
-
+/*
     // get relevant elements 
     var left = document.getElementsByClassName("nav-left");
     var right = document.getElementsByClassName("nav-right");
@@ -112,7 +112,7 @@ window.onload = function() {
         // swap arrow visibility
         left[i].style.opacity = "1";
         right[i].style.opacity = "0";       
-    }
+    }*/
 
     ////////////////////////////////////////////////////////////////
 

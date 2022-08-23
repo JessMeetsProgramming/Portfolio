@@ -1,12 +1,7 @@
 @font-face {
-    font-family: 'finition';
-    src: url(fonts/FinitionPersonalUseOnly-Brnx.ttf) format('truetype');
-}
-
-@font-face {
     font-family: 'nunito';
     src: url(fonts/Nunito-VariableFont_wght.ttf) format('truetype');
-    font-weight: 200; 
+    font-weight: 300; 
 }
 @font-face {
     font-family: 'rubik';
@@ -21,6 +16,20 @@
     src: url(fonts/HussarBoldWeb-bf92.woff) format('woff');
 }
 
+@font-face {
+    font-family: 'varino';
+    src: url(fonts/VarinonormalRegular-1GXaM.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'interLight';
+    src: url(fonts/Inter-VariableFont_slnt\,wght.ttf) format('truetype');
+    font-weight:200;
+}
+/*@font-face {
+    font-family: 'roboto';
+    src: url(fonts/Roboto-Light.ttf) format('truetype');
+}*/
 
 
 /* FONTS */
@@ -30,14 +39,9 @@ html {
 
 h1 {
     text-align: center;
-    font-family: 'finition','Brush Script MT', cursive;
-    padding-left: 20px;
-    padding-right: 20px;
-}
-
-/* </> characters - not all fonts include characters */
-span {
-    font-family: 'finition', cursive; 
+    font-family: 'varino', 'Brush Script MT', cursive; /*TODO change fallbacks */
+    padding-left: 25px;
+    padding-right: 25px;
 }
 
 h2 {
@@ -50,8 +54,11 @@ p, a {
     font-family: 'nunito', Helvetica, sans-serif;
     text-align: left;
     color:aliceblue;
+    text-decoration: none;
 }
-
+a span {
+    font-family: 'interLight';
+}
 #blurb p {
     font-family: 'rubik', Tahoma, sans-serif;
     text-align: center;    
@@ -99,15 +106,14 @@ hr#two {
 
 /* project pages content box*/
 .content {
-    margin: 0% 5% 5% 5%;
+    margin: 5%;
     display: flex;
-    flex-direction: row;    
+    flex-direction: row;
     max-width: 90%;
     max-height: 70%;
     justify-content: space-between;
-    align-items: center; /*TODO check this in larger displays*/
+    align-items: center;
 }
-
 /* project pages text container */
 .description {
     float: left;
@@ -117,10 +123,8 @@ hr#two {
     flex-grow: 1;
     max-height:100%;
 }
-
+/* change order of layout**/
 #description2 {
-    /*margin-right: 0;
-    margin-left: 7%;*/
     float: right;
 }
 #examples2 {
@@ -198,13 +202,9 @@ div#mobile .images img {
     cursor: pointer;
 }
 
-/* slide nav*/
-.nav-arrows img {
-    display: none;
-}
 
 /* img tilt animation */
-#examples img:hover {
+#examples2 img:hover {
     animation-name: tilt;
     animation-duration: 0.3s;
     animation-timing-function: ease;
@@ -219,38 +219,13 @@ div#mobile .images img {
 
 /*********************    MEDIA QUERIES    ************************/
 
-/* Change image size and navigation icons for small devices */
-@media only screen and (max-width:600px) {
-    #fp-nav.fp-right {
-        right: 0px; /* nav span */
-    }
-    #fp-nav ul li a.active span,
-    .fp-slidesNav ul li a.active span,
-    #fp-nav ul li:hover a.active span,
-    .fp-slidesNav ul li:hover a.active span {
-        height: 10px;
-        width: 10px;
-        margin: -5px 0 0 -5px;
-    }
-    #intro {
-        background-image: url(images/redblueV.webp);
-        background-size: auto;
-    }
-    /*.section {
-        padding: 3% 3%;
-    }*/
-    div#mobile .images img {
-        height: px;
-    }
-}
-
 
 /* Small devices (landscape mode) */ 
 @media only screen and (max-height:320px) and (orientation:landscape) {
     /* fonts */
     h1, .projects h1 {
-        font-size: 3.5rem !important; /*4.6*/
-        margin-bottom: 0px !important;/*6*/
+        font-size: 3.5rem !important; 
+        margin-bottom: 0px !important;
         font-weight: lighter;
         margin-top: 5px !important;
     }
@@ -272,9 +247,37 @@ div#mobile .images img {
     .description {
         width: 95% !important;
     }
-    /* nav span 
-    #fp-nav.fp-right {
-        right: 5px; 
+}
+
+/* Extra small devices (phones) */ /* TODO notes - galaxy fold */
+@media only screen and (max-width: 350px) {
+    h1 {
+        font-size: 2.8rem !important;
+        padding: 0;
+    }    
+    hr {
+        width: 90% !important;
+        border: 3px solid rgb(89, 193, 174) !important;
+    }
+    #blurb {
+        width: 90% !important;
+    }
+    div#mobile .images img {
+        height: 250px;
+    }
+    #breakout {
+        width: 180px;
+    }
+    .section {
+        padding: 10% 4%;
+    }
+
+} 
+
+/* Change image size and navigation icons for small devices */ /* TODO - most mobile devices */
+@media only screen and (max-width:600px) {
+    /*#fp-nav.fp-right {
+        right: 0px; /* nav span 
     }
     #fp-nav ul li a.active span,
     .fp-slidesNav ul li a.active span,
@@ -284,52 +287,82 @@ div#mobile .images img {
         width: 10px;
         margin: -5px 0 0 -5px;
     }*/
-}
-
-/* Extra small devices (phones) */ 
-@media only screen and (max-width: 350px) {
+    /*fonts*/
     h1 {
-        font-size: 4.2rem !important; 
-        font-weight: lighter;
-        margin-bottom: 15px;
-        margin-block-start: 0;
+        font-size: 3.6rem;
     }
     .projects h1 {
-        margin-bottom: 10px !important;
+        margin-top: 15px;
+        margin-bottom: 15px;
     }
     h2, a {
-        font-size: 1.6rem !important;
+        font-size: 1.8rem;
+        text-align: center;
     }
     p {
-        font-size: 1.3rem !important;
+        font-size: 1.4rem;
     }
     #blurb p {
-        font-size: 1.3rem !important;
+        font-size: 1.6rem;
     }
-    /* formatting*/
+    /*formatting*/
+    #intro {
+        background-image: url(images/redblueV.webp);
+        background-size: auto;
+    }
     hr {
-        width: 80% !important;
-        border: 3px solid rgb(89, 193, 174) !important;
+        width: 75%;
+        border: 4px solid rgb(89, 193, 174);
     }
     #blurb {
-        width: 85% !important;
+        width: 75%;
+    }
+    /* formatting for divs - change layout */  
+    .section {
+        padding: 7% 3%;
+    }    
+    .projects.fp-table {
+        justify-content: flex-start;
+    }    
+    .content {
+        flex-direction: column;
+        margin-bottom: 20px;
+        max-width: 90%;
+        height: 90%;
+        text-align: center;
+    }
+    .description {
+        float: none;
+        margin-right: 0;
+    }
+    #description1 {
+        margin-top: 0px;
+    }
+    .examples {
+        float: none;
+        max-height: inherit; 
+    } 
+    #examples1, #examples2 {
+        margin-top: 30px;
+        margin-bottom: 15px;
     }
     div#mobile .images img {
         height: px;
     }
-
+    #breakout {
+        margin: 10% 0 10% 0;
+    }
 }
 
-/* Small devices (tablets - 768px and down) */
-@media only screen and (max-width: 768px) and (min-height:540px) and (max-height:800px) {
+/* Small devices (tablets - 768px and down) */  /* TODO notes - surface duo  and (min-height:540px)*/
+@media only screen and (min-width:540px) and (max-width: 768px) and (max-height:800px) {
     /* fonts */
     h1 {
-        font-size: 5rem; 
-        margin-bottom: 15px;
+        font-size: 3.6rem;
     }
     .projects h1{
         margin-top: 15px;
-        margin-bottom: 15px; /*TODO 40px*/
+        margin-bottom: 15px; 
     }
     h2, a {
         font-size: 1.8rem;
@@ -359,58 +392,22 @@ div#mobile .images img {
     }    
     .content {
         flex-direction: column;
-        margin-bottom:0;
+        margin-bottom: 20px;
         max-width: 90%;
-        height: 90%; /* TODO 80 --- change to height of content */
+        height: 90%;
         text-align: center;
-    }
-    .slides {
-        position: absolute;
-        width: 84%;
-        height: auto;
     }
     .description {
         float: none;
         margin-right: 0;
-        width: 84% !important; /* accounting for padding/margins */ 
-        transform: translateX(0);
-        z-index: 1;
-        transition-duration: .4s;
     }
-    /*#description1 {
-        margin-top: -25px;
-    }*/
     #description1 {
         margin-top: 0px;
     }
     .examples {
         float: none;
-        transform: translateX(116%);   
-        z-index: 1;
-        transition-duration: .4s;
         max-height: inherit; 
     }    
-
-    /* slide navs (horizontal) */
-    .nav-arrows img {
-        position: absolute;     
-        display: inline-block;
-        bottom: 2%;
-        width: 50px;
-        z-index: 1;            
-        cursor: pointer;    
-    }    
-    .nav-left {
-        opacity: 0;     
-        left: 1%;
-    }
-    .nav-right { 
-        right: 1%; 
-    }
-    #nav-right3, #nav-left3 {
-        bottom: 6%; /*5*/
-    }
-
 
     /* multimedia sizing 
     #breakout {
@@ -422,30 +419,54 @@ div#mobile .images img {
 }
 
 
-/* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {
+/* Medium devices (landscape tablets, 768px and up) */ /*TODO notes - ipad air, mini, surface pro 7 */
+@media only screen and (min-width: 768px) and (orientation: portrait) {
     /* fonts */
     h1 {
-        font-size: 6.4rem; 
-        margin-bottom: 25px;
+        font-size: 5.6rem;
+    }
+    .projects h1 {
+        margin-bottom: 25px; 
     }
     h2, a {
-        font-size: 2rem;
+        font-size: 2.4rem;
+        text-align: center;
     }
     p {
-        font-size: 1.5rem;
-    }
-    #blurb p {
         font-size: 1.6rem;
     }
+    #blurb p {
+        font-size: 2.2rem;
+    }
+    /* formatting */
     .section {
         padding: 5% 3%;
     }
-    #breakout {
-        width: 250px;
+    .content {
+        margin: 0% 5% 5% 5%;
+        flex-direction: column;       
+        max-height: 90%;
+        text-align:center;
     }
-    div#mobile .images img {
-        height: px;
+    .description {
+        float: none;
+        margin-right: 0;
+    }
+    .examples {
+        float: none;
+        max-height: inherit; 
+    }
+    #examples1, #examples3 {
+        margin-top: 40px;
+    }
+    #description2, #examples2 {
+        margin-top: 30px;
+    }
+    #breakout {
+        width: 280px;
+    }
+    div#desktop .images img {
+        width: 550px;
     }
 
 }
@@ -454,26 +475,25 @@ div#mobile .images img {
 @media only screen and (min-width: 992px) {
     /* fonts */
     h1 {
-        font-size: 7.4rem;
+        font-size: 6.2rem;
         margin-bottom: 30px;
     }
     .projects h1 {
-        font-size: 7.2rem;
         margin-bottom: 20px;
         margin-top: 20px;
     }
     h2, a {
-        font-size: 2rem;
+        font-size: 2.4rem;
     }
     p {
-        font-size: 1.5rem;
+        font-size: 1.6rem;
     }
     #blurb p {
         font-size: 2.4rem;
     }
     /*formatting*/
     div#mobile .images img, #breakout {
-        height: 350px;
+        height: 300px;
         width: auto;
         margin-top: 20px;
     }
@@ -497,19 +517,19 @@ div#mobile .images img {
 /* Extra large devices (large laptops and desktops, 1200px and up), large tablets in portrait mode */
 @media only screen and (min-width: 1200px) {
     /* fonts */
-    h1 {
-        font-size: 8rem;
+    /*h1 {
+        font-size: 6.8rem;
         margin-bottom: 40px;
     }
     h2, a {
-        font-size: 2.2rem;
+        font-size: 2.4rem;
     }
     p {
-        font-size: 1.7rem;
+        font-size: 1.8rem;
     }
     #blurb p {
         font-size: 2.4rem;
-    }
+    }*/
     hr {
         width: 55%;
     }
@@ -518,212 +538,13 @@ div#mobile .images img {
     }*/
 }
 
-@media only screen and (min-width: 768px) and (orientation: portrait) {
-    /* fonts */
-    h1 {
-        font-size: 8rem;
-        margin-bottom: 30px;
-    }
-    h2, a {
-        font-size: 2.2rem;
-        text-align: center;
-    }
-    p {
-        font-size: 1.7rem;
-    }
-    #blurb p {
-        font-size: 2.4rem;
-    }
-    hr {
-        width: 55%;
-    }
-    /* layout */
-    .content {
-        flex-direction: column;
-        max-height: 90%;
-    }
-    .description {
-        margin-right: 0;
-    }
-    .examples {
-        margin-top: 60px; /* TODO 50-60 preferable for ipadAir - had 30 (not sure what for) */ 
-    }
-    #examples2, #description2 {
-        margin-bottom: 30px;
-    }
-    div#desktop .images img, video {
-        width: 520px;
-    }
-    div#mobile .images img {
-        height: 380px; /*360*/
-    }
-}
+/*@media only screen and (min-width: 768px) and (orientation: portrait) {
+}*/
 
-/* tall phones */
+/* tall phones 
 @media only screen and (max-width: 450px) and (min-height:800px) and (max-height: 920px) and (orientation:portrait) {
-    h1 {
-        font-weight:lighter;
-        font-size: 4.5rem;
-        margin-top: 0;
-        margin-bottom: 20px;
-    }
-    #blurb p, h2, a {
-        font-size: 1.5rem;
-        text-align: center;
-    }
-    p {
-        font-size: 1.3rem;
-    }
-    .section {
-        padding: 2% 3%;
-    }
-    .content {
-        margin-bottom: 0;
-        flex-direction: column;
-        max-height: 85%;
-        justify-content:center;
-    }
-    .examples {
-        margin-top: 40px;
-    }
-    #examples2, #description2 {
-        margin-top:15px;
-    }
-    .description {
-        margin-right: 0;
-    }
-    div#mobile .images img {
-        height: 250px;
-    }
-    
-}
+}*/
 
 /* landscape phones and tablets */
-@media only screen and (max-width:920px) and (max-height:540px) and (orientation:landscape) {
-    /*fonts*/
-    h1 {  /*TODO added*/
-        font-size: 5rem; 
-    }
-    .projects h1 {
-        margin-bottom: 15px;  
-        margin-top:15px;/* TODO added*/
-        font-size: 4.5rem;
-    }   
-    /*#project3 h1 {
-        margin-bottom: 0px;
-    } */
-    #project1 h2 {
-        margin-top: 20px;
-    }
-    h2, a {
-        font-size: 1.5rem;
-    }
-    p {
-        font-size: 1.3rem;
-    }
-
-    /* formatting for divs */
-    .section {
-        padding: 1% 3%;
-    }
-    .projects.fp-table {
-        justify-content: flex-start;
-    }
-    .content {
-        margin-bottom:0;
-        margin-left:0;
-        margin-right:0;
-        flex-direction: column;
-        max-width: 100%;
-        height: 80%; /* change to height of content */
-        text-align: center;
-        justify-content: center; /* TODO added */
-    }    
-    .slides {
-        position: absolute;
-        width: 100%;/*90%;*/
-        height: auto;
-    }
-    .description {
-        float: none;
-        margin-left: 2%;
-        margin-right: 2%;
-        width: 90% !important;
-        transform: translateX(0);
-        z-index: 1;
-        transition-duration: .4s;
-    }
-    /*#description3 {
-        margin-top: 20px;
-    }*/
-    .examples {
-        float: none;
-        transform: translateX(116%); 
-        z-index: 1;
-        transition-duration: .4s;
-        max-height:inherit; 
-        width: 94%;
-        margin-top: 15px;
-    } 
-
-    /* slide navs (horizontal) */       
-    .nav-arrows img {
-        position: absolute;     
-        display: inline-block;
-        bottom: 2%;
-        width: 45px;
-        z-index: 1;            
-        cursor: pointer;    
-    }    
-    .nav-left {
-        opacity: 0;     
-        left: 0%; 
-    }
-    .nav-right { 
-        right: 0%; 
-    }
-    #nav-right3, #nav-left3 {
-        bottom: 2%;
-    }
-
-
-    /* multimedia */
-    #icons {
-        display: none; /*only display desktop images */
-    }
-    video {
-        width: 450px;
-    }
-    #breakout {
-        width: 200px;
-    }
-    /*TODO taken from other media q 
-    #breakout {
-        width: 250px;
-    }*/
-    div#mobile .images img {
-        height: 340px;
-    }
-    #description1 {
-        margin-top: -25px;
-    }
-
- /**/
-    /* fullpage.js credit */
-    .fp-watermark {
-        right: 5% !important;
-    }
-
-    /* fullpage.js nav span - decrease size for smaller devices*/
-    #fp-nav.fp-right {
-        right: 5px; 
-    }
-    #fp-nav ul li a.active span,
-    .fp-slidesNav ul li a.active span,
-    #fp-nav ul li:hover a.active span,
-    .fp-slidesNav ul li:hover a.active span {
-        height: 10px;
-        width: 10px;
-        margin: -5px 0 0 -5px;
-    }
-}
+/*@media only screen and (max-width:920px) and (max-height:540px) and (orientation:landscape) {*/
+   

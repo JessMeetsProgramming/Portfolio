@@ -25,7 +25,7 @@
             <!-- INTRO section -->
             <div class="section" id="intro">
                 
-                <h1><span>&lt;/&gt;</span> Jess Greenwood</h1>
+                <h1>&lt;&nbsp; Jess Greenwood &nbsp;/ &gt;</h1>
                 
                 <hr id="one">
                 <div id="blurb">
@@ -40,35 +40,33 @@
             </div>
 
             <!-- ************** NEW SECTION ***************************** -->
-            <div class="section projects" id="project1"> 
+            <div class="section projects fp-auto-height-responsive" id="project1"> 
             <h1>Project One</h1>
             <!-- main container of section-->
             <div class="content">
                 <!-- Text container -->
-                <div class="slides description" id="description1">
+                <div class="description" id="description1">
                     <h2>Waipukurau Pizzeria</h2>
                     <p>The Waipukurau website was a project for my studies, it was primarily focused on the back-end database design. I started with designing the front-end HTML pages with the forms that would provide the basis for the CRUD system - which included booking and ordering pages. These pages were integrated with an existing database using PHP and MySQL. A simple user access system was added using PHP sessions to control admin vs customer access to pages and to allow users to create accounts and manage their orders and bookings.</p><p>Form validation was written in PHP before making any queries to the database and prepared statements were used to prevent any potential SQL injection attacks. Extensive testing was performed on all the database functions, I used Selenium IDE to create test suites to automate the process for maintenance purposes. We were provided with all the assets and a template for the design of this website, so it was just a matter of integrating the database pages and making sure the styling matched up.    
                     </p>
-                    <a href="http://waipukuraupizzeria.infinityfreeapp.com/" target="_blank">EXPLORE THE WEBSITE --> </a>
+                    <a href="http://waipukuraupizzeria.infinityfreeapp.com/" target="_blank">EXPLORE THE WEBSITE <span>--></span> </a>
                 </div>
                 <!-- Multimedia container -->
-                <div class="slides examples" id="examples1">
+                <div class="examples" id="examples1">
 
-                    <!--img src="images/Pizzeria.gif"/-->
                     <video data-src="images/Pizzeria.mp4" type="video/mp4" autoplay muted controls poster="images/PizzeriaHomeS.png" id="video"></video>
                     
                 </div> <!-- end of EXAMPLES-->
-                <!-- Navigation icons -->
-                <span class="nav-arrows"><img src="images/arrow_left.svg" id="nav-left1" class="nav-left"><img src="images/arrow_right.svg" id="nav-right1" class="nav-right"></span>
+            
             </div> <!-- end of CONTENT -->  
             </div>
 
             <!-- ************** NEW SECTION ***************************** -->
-            <div class="section projects" id="project2">
+            <div class="section projects fp-auto-height-responsive" id="project2">
                 <h1>Project Two</h1>
                 <!-- main container of section-->
                 <div class="content"><!-- Multimedia container -->
-                        <div class="slides examples" id="examples2">
+                        <div class="examples" id="examples2">
                         <!-- Desktop website images - image swap when clicked -->
                         <div id="desktop">
                             <picture class="images desktop img0 activeImg">
@@ -122,34 +120,32 @@
 
                     </div> <!-- end of EXAMPLES-->
                     <!-- Text container -->
-                    <div class="slides description" id="description2">
+                    <div class="description" id="description2">
                         <h2>The Haukai Restaurant</h2>
                         <p>Haukai was also an assignment, continuing in the restaurant theme - we were given a brief and were tasked with creating a website using HTML and CSS, I also found use for some Javascript. There was plenty of opportunity to be creative with this project as I was responsible for the design from conception through to completion, I played around with fonts, images and information architecture to display the relevant content.</p><p>Responsive design and performance on slower networks were accounted for when considering the user experience, as many customers would likely access the website from their mobile devices. Google APIs were implemented for dynamic content such as maps and forms. After completing the website we were asked to redo the website styling using a web framework to simplify code maintenance, the website is currently styled using W3.CSS.   
                         </p>
-                        <a href="https://blooming-plateau-23327.herokuapp.com/index.html" target="_blank">EXPLORE THE WEBSITE --> </a>
+                        <a href="https://blooming-plateau-23327.herokuapp.com/index.html" target="_blank">EXPLORE THE WEBSITE <span>--></span> </a>
                     </div>
-                    
-                    <span class="nav-arrows"><img src="images/arrow_left.svg" id="nav-left2" class="nav-left"><img src="images/arrow_right.svg" id="nav-right2" class="nav-right"></span>
+
                 </div> <!-- end of CONTENT -->  
             </div> <!-- end of SECTION -->
 
             <!-- ************** NEW SECTION ***************************** -->
-            <div class="section projects" id="project3">
+            <div class="section projects fp-auto-height-responsive" id="project3">
                 <!-- project 2 -->
                 <h1>Other Projects</h1>
                 <!-- main container of section-->
                 <div class="content">
                     <!-- Text container -->
-                    <div class="slides description" id="description3">
+                    <div class="description" id="description3">
                         <h2>Java and More Programming</h2>
                         <p>I also have a sound knowledge in programming languages and concepts to form a good foundation for further learning in web development and other areas of programming. I mostly worked on Java projects such as tictactoe, breakout and a student report system where object-oriented programming was applied. For a group project we designed a gym membership app prototype with Windows Forms and then individually coded with C# and SQL. We were also introduced to Python and asked to convert a previous Java menu of math functions to a working Python program.</p>
                     </div>
                     <!-- Multimedia container-->
-                    <div class="slides examples" id="examples3"> 
-                        <img src="images/Breakout2.gif" class="images" id="breakout"> 
+                    <div class="examples" id="examples3"> 
+                        <img src="images/Breakout2.gif" alt="Breakout game in action" class="images" id="breakout"> 
                     </div>
 
-                    <span class="nav-arrows"><img src="images/arrow_left.svg" id="nav-left3" class="nav-left"><img src="images/arrow_right.svg" id="nav-right3" class="nav-right"></span>
                 </div><!-- end of CONTENT-->
             </div>
 
@@ -171,7 +167,8 @@
                 //fitToSection: false,
                 //scrollBar: true,
                 //scrollOverflow: false,  TODO removes scrolling within sections - make sure there is no content to overflow - different settings for mobile??
-                //responsiveHeight: 600, //will add normal scrolling to sections/site when the browser height is less than 900
+                responsiveWidth: 600, //will add continuous scrolling to sections/site when the browser width is less than 600
+                responsiveHeight: 500,
                 lazyloading: true,
                 credits: { enabled: true, label: 'Made with fullPage.js', position: 'right'},
             });
