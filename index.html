@@ -95,20 +95,20 @@
                         <!-- Mobile website images -->
                         <div id="mobile">
                             <picture class="images mobile img0"> 
-                                <source srcset="images/haukaiHomeMobXS.png" media="(max-width:600px)">
+                                <source srcset="images/haukaiHomeMobXS.png" media="(max-width:600px)" type="image/png">
                                 <source srcset="images/haukaiHomeMobS.png" media="(max-width:1400px)" type="image/png">
                                 <source srcset="images/haukaiHomeMob.png" media="(min-width:1400px)" type="image/png">
                                 <!--fallback image-->
                                 <img data-src="images/haukaiHomeMob.png" alt="Haukai Home Mobile">
                             </picture>   
                             <picture class="images mobile img1">
-                                <source srcset="images/haukaiMenuMobXS.png" media="(max-width:600px)">
+                                <source srcset="images/haukaiMenuMobXS.png" media="(max-width:600px)" type="image/png">
                                 <source srcset="images/haukaiMenuMobS.png" media="(max-width:1400px)" type="image/png">
                                 <source srcset="images/haukaiMenuMob.png" media="(min-width:1400px)" type="image/png">
                                 <img data-src="images/haukaiMenuMob.png" alt="Haukai Menu Mobile">
                             </picture>
                             <picture class="images mobile img2">
-                                <source srcset="images/haukaiResMobXS.png" media="(max-width:600px)">
+                                <source srcset="images/haukaiResMobXS.png" media="(max-width:600px)" type="image/png">
                                 <source srcset="images/haukaiResMobS.png" media="(max-width:1400px)" type="image/png">
                                 <source srcset="images/haukaiResMob.png" media="(min-width:1400px)" type="image/png">
                                 <img data-src="images/haukaiResMob.png" alt="Haukai Reservations Mobile">
@@ -143,7 +143,11 @@
                     </div>
                     <!-- Multimedia container-->
                     <div class="examples" id="examples3"> 
-                        <img src="images/Breakout2.gif" alt="Breakout game in action" class="images" id="breakout"> 
+                        <picture class="images" id="breakout">
+                            <source srcset="images/Breakout2.gif" type="image/gif">
+                            <img data-src="images/Breakout2.png" alt="Breakout game in action">
+                        </picture>
+                         
                     </div>
 
                 </div><!-- end of CONTENT-->

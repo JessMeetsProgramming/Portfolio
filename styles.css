@@ -296,7 +296,7 @@ div#mobile .images img {
         margin-bottom: 15px;
     }
     h2, a {
-        font-size: 1.8rem;
+        font-size: 2rem;
         text-align: center;
     }
     p {
@@ -311,11 +311,11 @@ div#mobile .images img {
         background-size: auto;
     }
     hr {
-        width: 75%;
+        width: 85%;
         border: 4px solid rgb(89, 193, 174);
     }
     #blurb {
-        width: 75%;
+        width: 85%;
     }
     /* formatting for divs - change layout */  
     .section {
