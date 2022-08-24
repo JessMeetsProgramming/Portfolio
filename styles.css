@@ -12,15 +12,9 @@
     src: url(fonts/Volkhov-Bold.ttf) format('truetype');
 }
 @font-face {
-    font-family: 'hussar';
-    src: url(fonts/HussarBoldWeb-bf92.woff) format('woff');
-}
-
-@font-face {
     font-family: 'varino';
     src: url(fonts/VarinonormalRegular-1GXaM.ttf) format('truetype');
 }
-
 @font-face {
     font-family: 'interLight';
     src: url(fonts/Inter-VariableFont_slnt\,wght.ttf) format('truetype');
@@ -35,28 +29,28 @@ html {
 
 h1 {
     text-align: center;
-    font-family: 'varino', 'Brush Script MT', cursive; /*TODO change fallbacks */
+    font-family: 'varino', 'Lucida Console', cursive; 
     padding-left: 15px; 
     padding-right: 15px; 
 }
 
 h2 {
-    font-family: 'volkhov', 'hussar', Garamond, serif; 
+    font-family: 'volkhov', Cambria, Garamond, serif; 
     text-transform: uppercase;
     color: khaki;
 }
 
 p, a {
-    font-family: 'nunito', Helvetica, sans-serif;
+    font-family: 'nunito', 'Gill Sans', Tahoma, sans-serif; 
     text-align: left;
     color:aliceblue;
     text-decoration: none;
 }
 a span {
-    font-family: 'interLight';
+    font-family: 'interLight','Segoe UI', Georgia;
 }
 #blurb p {
-    font-family: 'rubik', Tahoma, sans-serif;
+    font-family: 'rubik', 'Trebuchet MS', 'Segoe UI', sans-serif; 
     text-align: center;    
     line-height: 1.6em;
     color: aliceblue;
@@ -180,7 +174,7 @@ div#mobile .images img {
 /* icons container*/
 #icons {
     font-size: 40px;
-    font-family: 'nunito', Helvetica, sans-serif;
+    font-family: 'nunito', 'Gill Sans', Tahoma, sans-serif;
     color: aliceblue;
     cursor: pointer;
 }
