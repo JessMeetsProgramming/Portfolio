@@ -148,6 +148,7 @@ div#desktop {
 }
 #breakout img {
     border-radius: 5px;
+    cursor: default;
     align-self: center;
     height: 100%;
     width: auto;
