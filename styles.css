@@ -484,7 +484,7 @@ div#mobile .images img {
         justify-content: flex-start;
     }
     #project3 .content {
-        margin-top: 5%;
+        margin-top: 3%;
     }
     /* multimedia sizing */    
     div#mobile .images img, #breakout img {
@@ -499,26 +499,26 @@ div#mobile .images img {
 @media only screen and (min-width: 1200px) {
     /* fonts */
     h1 {
-        font-size: 6.4rem;
+        font-size: 5.8rem;
         margin-bottom: 40px;
     }
     h2, a, #blurb p {
-        font-size: 2.4rem;
+        font-size: 2.2rem;
     }
     p {
-        font-size: 1.8rem;
+        font-size: 1.7rem;
     }
     /*formatting*/
     hr {
         width: 55%;
     }
     .section {
-        padding: 6% 3%;
+        padding: 2%;
     }
     .content {
-        max-width: 90%;
-        max-height: 85%;
-        margin-top: 3%;
+        max-width: 95%;
+        max-height: 90%;
+        margin-top: 10px;
     }
     #description1 {
         margin-right: 5%;
@@ -527,9 +527,6 @@ div#mobile .images img {
         justify-content: flex-start;
     }
     /* nav span */
-    #fp-nav.fp-right {
-        right: 22px;
-    }
     #fp-nav ul li {
         width: 17px;
         height: 16px;
@@ -550,7 +547,7 @@ div#mobile .images img {
     }
     /*multimedia sizing*/
     div#mobile .images img, #breakout img {
-        height: 350px;
+        height: 340px;
     }
     #icons {
         font-size: 50px;
