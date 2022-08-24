@@ -147,17 +147,6 @@ div#desktop {
     display: inline-block; 
 }
 
-/*TODO delete borders
-.description, .content {
-    border: solid white 1px;
-} 
-div#mobile,div#desktop {
-    border: solid red 1px;
-}
-.examples{
-    border: solid yellow 2px;
-}*/
-
 /*img styling*/
 .images img, video {
     cursor: pointer;
@@ -214,7 +203,7 @@ div#mobile .images img {
 /*********************    MEDIA QUERIES    ************************/
 
 
-/* Small devices (landscape mode) */ /* TODOall phones in landscape??*/
+/* Small devices (landscape mode) */ 
 @media only screen and (max-height:415px) and (orientation:landscape) {
     /* fonts */
     h1 {
@@ -236,9 +225,6 @@ div#mobile .images img {
         font-size: 1.3rem !important;
     }
     /* formatting */    
-    .section {
-        padding: 5% 3%;
-    }      
     hr {
         width: 65%;
         border: 4px solid rgb(89, 193, 174) !important;
@@ -247,14 +233,16 @@ div#mobile .images img {
         width: 90% !important;
         margin-top: 10px;
         margin-bottom: 10px;
-    }
+    }    
+    .section {
+        padding: 5% 3%;
+    } 
     .content {
         flex-direction: column;
         max-width: 95%;
         text-align: center;
     } 
     .description {
-
         float: none;
         margin-right: 0;
     }
@@ -271,8 +259,9 @@ div#mobile .images img {
 
 }
 
-/* Extra small devices (phones) */ /* TODO notes - galaxy fold */
+/* Extra small devices (phones) */ 
 @media only screen and (max-width: 350px), (max-height: 350px) {
+    /*fonts*/
     h1 {
         font-size: 2.8rem !important;
         padding: 0;
@@ -284,7 +273,11 @@ div#mobile .images img {
     }    
     p {
         font-size: 1.4rem !important;
+    }    
+    .fp-watermark a {
+        font-size: 1.3rem !important;
     }
+    /*formatting */
     hr {
         width: 75% !important;
         border: 3px solid rgb(89, 193, 174) !important;
@@ -292,18 +285,18 @@ div#mobile .images img {
     #blurb {
         width: 90% !important;
     }
-    div#mobile .images img {
-        height: 250px;
-    }
     .section {
         padding: 4% 3% !important;
     }
-    .fp-watermark a {
-        font-size: 1.3rem !important;
+    /*multimedia*/
+    div#mobile .images img {
+        height: 250px;
     }
 
 } 
 
+
+/* vertical background image for mobiles */
 @media only screen and (max-width: 600px) {
     #intro {
         background-image: url(images/redblueV.webp);
@@ -311,9 +304,9 @@ div#mobile .images img {
     }
 }
 
-/* Change image size and navigation icons for small devices */ /* TODO - most mobile devices, surface duo portrait */
-@media only screen and (max-width:768px) {
 
+/* Change image size and navigation icons for small devices */ 
+@media only screen and (max-width:768px) {
     /*fonts*/
     h1 {
         font-size: 3.6rem;
@@ -332,22 +325,17 @@ div#mobile .images img {
     #blurb p {
         font-size: 1.8rem;
     }
-    /*formatting*/
-    #intro {
-        background-image: url(images/redblueM.webp);
-        background-size: cover;
-    }
+    /* formatting */   
+    .section {
+        padding: 5% 5%;
+    }  
     hr {
         width: 85%;
         border: 4px solid rgb(89, 193, 174);
     }
     #blurb {
         width: 85%;
-    }
-    /* formatting for divs - change layout */  
-    .section {
-        padding: 7% 5%;
-    }    
+    }      
     .projects.fp-table {
         justify-content: flex-start;
     }    
@@ -373,8 +361,10 @@ div#mobile .images img {
         margin-top: 30px;
         margin-bottom: 15px;
     }
-    div#mobile .images img {
-        height: px;
+    /* multimedia sizing */
+    #intro {
+        background-image: url(images/redblueM.webp);
+        background-size: cover;
     }
     #breakout img {
         margin: 10% 0 10% 0;
@@ -382,73 +372,7 @@ div#mobile .images img {
 }
 
 
-
-/* Small devices (tablets - 768px and down) */  /* TODO notes - surface duo  and (min-height:540px)*/
-/*@media only screen and (min-width:540px) and (max-width: 768px) and (max-height:800px) {
-    /* fonts 
-    h1 {
-        font-size: 3.6rem;
-    }
-    .projects h1{
-        margin-top: 15px;
-        margin-bottom: 15px; 
-    }
-    h2, a {
-        font-size: 1.8rem;
-        text-align: center;
-    }
-    p {
-        font-size: 1.4rem;
-    }
-    #blurb p {
-        font-size: 1.6rem;
-    }
-    /* formatting 
-    hr {
-        width: 70%;
-        border: 4px solid rgb(89, 193, 174);
-    }
-    #blurb {
-        width: 70%;
-    }
-
-    /* formatting for divs 
-    .section {
-        padding: 7% 3%;
-    }    
-    .projects.fp-table {
-        justify-content: flex-start;
-    }    
-    .content {
-        flex-direction: column;
-        margin-bottom: 20px;
-        max-width: 90%;
-        height: 90%;
-        text-align: center;
-    }
-    .description {
-        float: none;
-        margin-right: 0;
-    }
-    #description1 {
-        margin-top: 0px;
-    }
-    .examples {
-        float: none;
-        max-height: inherit; 
-    }    
-
-    /* multimedia sizing 
-    #breakout {
-        width: 250px;
-    }
-    div#mobile .images img {
-        height: 340px;
-    }
-}*/
-
-
-/* Medium devices (portrait tablets, 768px and up) */ /*TODO notes - ipad air, mini, surface pro 7 */
+/* Medium devices (portrait tablets, 768px and up) */ 
 @media only screen and (min-width: 768px) and (orientation: portrait) {
     /* fonts */
     h1 {
@@ -468,12 +392,8 @@ div#mobile .images img {
         font-size: 2.2rem;
     }
     /* formatting */
-    #intro {
-        background-image: url(images/redblueM.webp);
-        background-size: cover;
-    }
     .section {
-        padding: 7% 5%;
+        padding: 5% 5%;
     }
     .content {
         margin: 0% 5% 5% 5%;
@@ -496,16 +416,31 @@ div#mobile .images img {
         margin-top: 30px;
         margin-bottom: 15px;
     }
+    /* multimedia sizing */    
+    #intro {
+        background-image: url(images/redblueM.webp);
+        background-size: cover;
+    }
     div#mobile .images img, #breakout img {
         height: 350px;
     }
-    div#desktop .images img {
+    div#desktop .images img, video {
         width: 550px;
     }
+    #icons {
+        font-size: 48px;
+    }
+    img#pc, img#mob {
+        width: 34px;
+        position: relative;
+        top: 4px;
+    }
+
 
 }
 
-/* Large devices (laptops/desktops, 992px and up) */ /* TODO nesthub */
+
+/* Large devices (laptops/desktops, 992px and up) */ 
 @media only screen and (min-width: 992px) {
     /* fonts */
     h1 {
@@ -526,12 +461,8 @@ div#mobile .images img {
         font-size: 1.8rem;
     }
     /*formatting*/
-    div#mobile .images img, #breakout img {
-        height: 320px;
-        margin-top: 20px;
-    }
     .section {
-        padding: 2% 3%;
+        padding: 2% 3%; 
     }
     #description1 {
         margin-right: 2.5%;
@@ -544,6 +475,7 @@ div#mobile .images img {
         align-items: flex-start;
         margin: 0% 2.5% 2.5% 2.5%;
         max-width: 95%;
+        max-height: 80%;
     }
     div#desktop {
         margin-top: 50px;
@@ -554,27 +486,144 @@ div#mobile .images img {
     #project3 .content {
         margin-top: 5%;
     }
+    /* multimedia sizing */    
+    div#mobile .images img, #breakout img {
+        height: 320px;
+        margin-top: 20px;
+    }
 
 }
 
-/* Extra large devices (large laptops and desktops, 1200px and up), large tablets in portrait mode */ /*TODO - my laptop, nesthub max*/
+
+/* Extra large devices (large laptops and desktops, 1200px and up), large tablets in portrait mode */ 
 @media only screen and (min-width: 1200px) {
     /* fonts */
     h1 {
         font-size: 6.4rem;
         margin-bottom: 40px;
     }
-    h2, a, #blurb p{
-        font-size: 2.2rem;
+    h2, a, #blurb p {
+        font-size: 2.4rem;
     }
     p {
-        font-size: 1.6rem;
+        font-size: 1.8rem;
     }
+    /*formatting*/
     hr {
         width: 55%;
     }
+    .section {
+        padding: 6% 3%;
+    }
     .content {
         max-width: 90%;
+        max-height: 85%;
+        margin-top: 3%;
+    }
+    #description1 {
+        margin-right: 5%;
+    }
+    .projects.fp-table {
+        justify-content: flex-start;
+    }
+    /* nav span */
+    #fp-nav.fp-right {
+        right: 22px;
+    }
+    #fp-nav ul li {
+        width: 17px;
+        height: 16px;
+        margin: 9px;
+    }
+    /* active/hovered nav dots - larger size */
+    #fp-nav ul li a.active span,    
+    #fp-nav ul li:hover a.active span {
+        height: 16px;
+        width: 16px;
+        margin: -8px 0 0 -8px;
+    }
+    /* inactive nav dots */
+    #fp-nav ul li a span {
+        width: 5px;
+        height: 5px;
+        margin: -2.5px 0 0 -2.5px;
+    }
+    /*multimedia sizing*/
+    div#mobile .images img, #breakout img {
+        height: 350px;
+    }
+    #icons {
+        font-size: 50px;
+    }
+    img#pc, img#mob {
+        width: 32px;
+        top: 4px;
+        position: relative;
+    } 
+}
+
+@media only screen and (min-width: 1800px) {
+        /* fonts */
+    h1 {
+        font-size: 7.2rem;
+        margin-bottom: 40px;
+    }
+    h2, a, #blurb p{
+        font-size: 3rem;
+    }
+    p, .fp-watermark a {
+        font-size: 2.2rem;
+    }
+    /*formatting*/
+    hr {
+        width: 55%;
+        border: 7px solid rgb(89, 193, 174);
+    }
+    .content {
+        max-width: 95%;
+    }
+    /*multimedia sizing*/
+    div#mobile .images img, #breakout img {
+        height: 480px;
+    }  
+    div#desktop .images img, video {
+        width: 720px;
+    }
+    #icons {
+        font-size: 70px;
+    }
+    img#pc, img#mob {
+        width: 45px;
+        top: 5px;
+        position: relative;
+    } 
+    .images img, video, #breakout img {
+        border-radius: 10px;   
+    } 
+}
+
+@media only screen and (min-width: 2400px) {
+    /* fonts */
+    h1 {
+        font-size: 10rem;
+        margin-bottom: 80px;
+    }
+    h2 {
+        margin-top:0;
+    }
+    h2, a, #blurb p{
+        font-size: 4.8rem;
+    }
+    p, .fp-watermark a{
+        font-size: 3.2rem;
+    }    
+    /*formatting*/
+    hr {
+        width: 60%;
+        border: 10px solid rgb(89, 193, 174);
+    }
+    .content {
+        max-width: 100%;
         margin-top: 5%;
     }
     #description1 {
@@ -583,18 +632,49 @@ div#mobile .images img {
     .projects.fp-table {
         justify-content: flex-start;
     }
-    div#mobile .images img, #breakout img {
-        height: 350px;
+    /* nav span */
+    #fp-nav.fp-right {
+        right: 34px;
     }
+    #fp-nav ul li {
+        width: 28px;
+        height: 26px;
+        margin: 14px;
+    }
+    /* active/hovered nav dots - larger size */
+    #fp-nav ul li a.active span,    
+    #fp-nav ul li:hover a.active span {
+        height: 24px;
+        width: 24px;
+        margin: -12px 0 0 -12px;
+    }
+    /* inactive nav dots */
+    #fp-nav ul li a span {
+        width: 8px;
+        height: 8px;
+        margin: -4px 0 0 -4px;
+    }
+    /*multimedia sizing*/
+    div#mobile .images img, #breakout img {
+        height: 650px;
+    }
+    div#desktop .images img, video {
+        width: 950px;
+    }
+    .images img, video, #breakout img {
+        border-radius: 15px;   
+    }
+    #icons {
+        font-size: 90px;
+    }
+    img#pc, img#mob {
+        width: 65px;
+        top: 10px;
+        position: relative;
+    }
+
+    
 }
 
-/*@media only screen and (min-width: 768px) and (orientation: portrait) {
-}*/
 
-/* tall phones 
-@media only screen and (max-width: 450px) and (min-height:800px) and (max-height: 920px) and (orientation:portrait) {
-}*/
-
-/* landscape phones and tablets */
-/*@media only screen and (max-width:920px) and (max-height:540px) and (orientation:landscape) {*/
    
