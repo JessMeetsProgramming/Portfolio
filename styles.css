@@ -26,10 +26,6 @@
     src: url(fonts/Inter-VariableFont_slnt\,wght.ttf) format('truetype');
     font-weight:200;
 }
-/*@font-face {
-    font-family: 'roboto';
-    src: url(fonts/Roboto-Light.ttf) format('truetype');
-}*/
 
 
 /* FONTS */
@@ -40,8 +36,8 @@ html {
 h1 {
     text-align: center;
     font-family: 'varino', 'Brush Script MT', cursive; /*TODO change fallbacks */
-    padding-left: 25px;
-    padding-right: 25px;
+    padding-left: 15px; 
+    padding-right: 15px; 
 }
 
 h2 {
@@ -92,7 +88,7 @@ hr#two {
 
 /*full size of viewport*/
 .section {
-    padding: 10% 3%;
+    padding: 10% 5%;
     color:#f0f8ff;
 }
 
@@ -167,23 +163,21 @@ div#mobile,div#desktop {
     cursor: pointer;
     border-radius: 5px;   
 }
-#breakout {
+#breakout img {
     border-radius: 5px;
     align-self: center;
     height: 100%;
-    width: 250px;
+    width: auto;
 }
 /*desktop image sizing*/
 div#desktop .images img, video {
     width: 100%;
     height: auto;
-    /*object-fit: contain; scale up or down according to parent container*/
 }
 /*mobile image sizing*/
 div#mobile .images img {
     height: 100%;
     width: auto;
-    /* object-fit: contain; scale up or down according to parent container*/
 }
 
 /* hide/show images */
@@ -220,43 +214,79 @@ div#mobile .images img {
 /*********************    MEDIA QUERIES    ************************/
 
 
-/* Small devices (landscape mode) */ 
-@media only screen and (max-height:320px) and (orientation:landscape) {
+/* Small devices (landscape mode) */ /* TODOall phones in landscape??*/
+@media only screen and (max-height:415px) and (orientation:landscape) {
     /* fonts */
-    h1, .projects h1 {
-        font-size: 3.5rem !important; 
-        margin-bottom: 0px !important;
-        font-weight: lighter;
-        margin-top: 5px !important;
+    h1 {
+        font-size: 3.4rem;
     }
-    h2 {
-        font-size: 1.3rem !important;
-        /*margin-top: 25px;*/
+    .projects h1 {
+        margin-bottom: 0px;
+        margin-top: 5px;
     }
-    p, a {
-        font-size: 1.2rem !important;
+    #blurb p, h2, a  {
+        font-size: 1.6rem;
+    }
+    p {
+        font-size: 1.4rem;
         margin-block-start: 0em;
         margin-block-end: 0.5em;
     }
-    #blurb p {
+    .fp-watermark a {
         font-size: 1.3rem !important;
     }
-    div#desktop .images img, video {
-        width: 300px;
+    /* formatting */    
+    .section {
+        padding: 5% 3%;
+    }      
+    hr {
+        width: 65%;
+        border: 4px solid rgb(89, 193, 174) !important;
     }
+    #blurb {
+        width: 90% !important;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    .content {
+        flex-direction: column;
+        max-width: 95%;
+        text-align: center;
+    } 
     .description {
-        width: 95% !important;
+
+        float: none;
+        margin-right: 0;
     }
+    #description1, #description3 {
+        margin-bottom: 25px;
+    }
+    /* multimedia sizing */
+    div#desktop .images img, video {
+        width: 350px;
+    }
+    div#mobile .images img, #breakout img {
+        height: 250px;
+    }
+
 }
 
 /* Extra small devices (phones) */ /* TODO notes - galaxy fold */
-@media only screen and (max-width: 350px) {
+@media only screen and (max-width: 350px), (max-height: 350px) {
     h1 {
         font-size: 2.8rem !important;
         padding: 0;
+        margin-top:  0;
+        margin-bottom: 15px;
+    }
+    #blurb p, h2, a {
+        font-size: 1.4rem !important;
     }    
+    p {
+        font-size: 1.4rem !important;
+    }
     hr {
-        width: 90% !important;
+        width: 75% !important;
         border: 3px solid rgb(89, 193, 174) !important;
     }
     #blurb {
@@ -265,28 +295,25 @@ div#mobile .images img {
     div#mobile .images img {
         height: 250px;
     }
-    #breakout {
-        width: 180px;
-    }
     .section {
-        padding: 10% 4%;
+        padding: 4% 3% !important;
+    }
+    .fp-watermark a {
+        font-size: 1.3rem !important;
     }
 
 } 
 
-/* Change image size and navigation icons for small devices */ /* TODO - most mobile devices */
-@media only screen and (max-width:600px) {
-    /*#fp-nav.fp-right {
-        right: 0px; /* nav span 
+@media only screen and (max-width: 600px) {
+    #intro {
+        background-image: url(images/redblueV.webp);
+        background-size: auto;
     }
-    #fp-nav ul li a.active span,
-    .fp-slidesNav ul li a.active span,
-    #fp-nav ul li:hover a.active span,
-    .fp-slidesNav ul li:hover a.active span {
-        height: 10px;
-        width: 10px;
-        margin: -5px 0 0 -5px;
-    }*/
+}
+
+/* Change image size and navigation icons for small devices */ /* TODO - most mobile devices, surface duo portrait */
+@media only screen and (max-width:768px) {
+
     /*fonts*/
     h1 {
         font-size: 3.6rem;
@@ -307,8 +334,8 @@ div#mobile .images img {
     }
     /*formatting*/
     #intro {
-        background-image: url(images/redblueV.webp);
-        background-size: auto;
+        background-image: url(images/redblueM.webp);
+        background-size: cover;
     }
     hr {
         width: 85%;
@@ -319,7 +346,7 @@ div#mobile .images img {
     }
     /* formatting for divs - change layout */  
     .section {
-        padding: 7% 3%;
+        padding: 7% 5%;
     }    
     .projects.fp-table {
         justify-content: flex-start;
@@ -349,14 +376,16 @@ div#mobile .images img {
     div#mobile .images img {
         height: px;
     }
-    #breakout {
+    #breakout img {
         margin: 10% 0 10% 0;
     }
 }
 
+
+
 /* Small devices (tablets - 768px and down) */  /* TODO notes - surface duo  and (min-height:540px)*/
-@media only screen and (min-width:540px) and (max-width: 768px) and (max-height:800px) {
-    /* fonts */
+/*@media only screen and (min-width:540px) and (max-width: 768px) and (max-height:800px) {
+    /* fonts 
     h1 {
         font-size: 3.6rem;
     }
@@ -374,7 +403,7 @@ div#mobile .images img {
     #blurb p {
         font-size: 1.6rem;
     }
-    /* formatting */
+    /* formatting 
     hr {
         width: 70%;
         border: 4px solid rgb(89, 193, 174);
@@ -383,7 +412,7 @@ div#mobile .images img {
         width: 70%;
     }
 
-    /* formatting for divs */  
+    /* formatting for divs 
     .section {
         padding: 7% 3%;
     }    
@@ -412,11 +441,11 @@ div#mobile .images img {
     /* multimedia sizing 
     #breakout {
         width: 250px;
-    }*/
+    }
     div#mobile .images img {
         height: 340px;
     }
-}
+}*/
 
 
 /* Medium devices (portrait tablets, 768px and up) */ /*TODO notes - ipad air, mini, surface pro 7 */
@@ -439,14 +468,18 @@ div#mobile .images img {
         font-size: 2.2rem;
     }
     /* formatting */
+    #intro {
+        background-image: url(images/redblueM.webp);
+        background-size: cover;
+    }
     .section {
-        padding: 5% 3%;
+        padding: 7% 5%;
     }
     .content {
         margin: 0% 5% 5% 5%;
         flex-direction: column;       
         max-height: 90%;
-        text-align:center;
+        text-align: center;
     }
     .description {
         float: none;
@@ -459,11 +492,12 @@ div#mobile .images img {
     #examples1, #examples3 {
         margin-top: 40px;
     }
-    #description2, #examples2 {
+    #examples2 {
         margin-top: 30px;
+        margin-bottom: 15px;
     }
-    #breakout {
-        width: 280px;
+    div#mobile .images img, #breakout img {
+        height: 350px;
     }
     div#desktop .images img {
         width: 550px;
@@ -471,11 +505,11 @@ div#mobile .images img {
 
 }
 
-/* Large devices (laptops/desktops, 992px and up) */ /* TODO my laptop */
+/* Large devices (laptops/desktops, 992px and up) */ /* TODO nesthub */
 @media only screen and (min-width: 992px) {
     /* fonts */
     h1 {
-        font-size: 6.2rem;
+        font-size: 5rem;
         margin-bottom: 30px;
     }
     .projects h1 {
@@ -483,59 +517,75 @@ div#mobile .images img {
         margin-top: 20px;
     }
     h2, a {
-        font-size: 2.4rem;
+        font-size: 2rem;
     }
     p {
-        font-size: 1.6rem;
+        font-size: 1.5rem;
     }
     #blurb p {
-        font-size: 2.4rem;
+        font-size: 1.8rem;
     }
     /*formatting*/
-    div#mobile .images img, #breakout {
-        height: 300px;
-        width: auto;
+    div#mobile .images img, #breakout img {
+        height: 320px;
         margin-top: 20px;
     }
     .section {
         padding: 2% 3%;
     }
-    #description2 {
+    #description1 {
+        margin-right: 2.5%;
+    }
+    #description2, #description3 {
         margin-right: 0;
         margin-left: 7%;
     }
     .content {
         align-items: flex-start;
-        margin-top: 5%;
+        margin: 0% 2.5% 2.5% 2.5%;
+        max-width: 95%;
     }
     div#desktop {
         margin-top: 50px;
     }
+    #project3.fp-table {
+        justify-content: flex-start;
+    }
+    #project3 .content {
+        margin-top: 5%;
+    }
 
 }
 
-/* Extra large devices (large laptops and desktops, 1200px and up), large tablets in portrait mode */
+/* Extra large devices (large laptops and desktops, 1200px and up), large tablets in portrait mode */ /*TODO - my laptop, nesthub max*/
 @media only screen and (min-width: 1200px) {
     /* fonts */
-    /*h1 {
-        font-size: 6.8rem;
+    h1 {
+        font-size: 6.4rem;
         margin-bottom: 40px;
     }
-    h2, a {
-        font-size: 2.4rem;
+    h2, a, #blurb p{
+        font-size: 2.2rem;
     }
     p {
-        font-size: 1.8rem;
+        font-size: 1.6rem;
     }
-    #blurb p {
-        font-size: 2.4rem;
-    }*/
     hr {
         width: 55%;
     }
-    /*div#mobile .images img {
-        height: px;
-    }*/
+    .content {
+        max-width: 90%;
+        margin-top: 5%;
+    }
+    #description1 {
+        margin-right: 5%;
+    }
+    .projects.fp-table {
+        justify-content: flex-start;
+    }
+    div#mobile .images img, #breakout img {
+        height: 350px;
+    }
 }
 
 /*@media only screen and (min-width: 768px) and (orientation: portrait) {

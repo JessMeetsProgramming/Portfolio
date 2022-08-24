@@ -61,59 +61,6 @@ window.onload = function() {
         imageIndex = 0;
     }
 
-
-    /* ---------change layout to horizontal slides for small devices------------ */
-/*
-    // get relevant elements 
-    var left = document.getElementsByClassName("nav-left");
-    var right = document.getElementsByClassName("nav-right");
-    var description = document.getElementsByClassName("description");  
-    var examples = document.getElementsByClassName("examples");
-
-    // add click event listener and assign variables from array 
-    for (i = 0; i < left.length; i++) {
-        left[i].addEventListener("click", navleft);
-        right[i].addEventListener("click", navright); 
-        description[i];
-        examples[i];   
-    }
-    
-    function navleft() {       
-        // check which element was selected  
-        if (this.id == "nav-left1") {
-            i = 0;
-        } else if (this.id == "nav-left2") {
-            i = 1;
-        } else {
-            i = 2;
-        }
-        // move description on-screen
-        description[i].style.transform = "translateX(0)";
-        // move examples section off-screen
-        examples[i].style.transform = "translateX(116%)"; 
-        // swap arrow visibility
-        left[i].style.opacity = "0";
-        right[i].style.opacity = "1";
-    }
-
-    function navright() {
-        // check which element was selected
-        if(this.id == "nav-right1") {
-            i = 0;
-        } else if (this.id == "nav-right2") {
-            i = 1;
-        } else {
-            i = 2;
-        }
-        // move examples on-screen
-        examples[i].style.transform = "translateX(0)";
-        // move examples section off-screen
-        description[i].style.transform = "translateX(-116%)";  
-        // swap arrow visibility
-        left[i].style.opacity = "1";
-        right[i].style.opacity = "0";       
-    }*/
-
     ////////////////////////////////////////////////////////////////
 
     /* video reset */

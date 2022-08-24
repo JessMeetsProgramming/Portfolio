@@ -161,17 +161,11 @@
             // initialise fullpage sections and define colors and other settings 
             new fullpage('#fullpage', {
                 licenseKey: 'gplv3-license',
-                sectionsColor: ['#00000f', '#07395f','#417F73', '#414066'], // #585582 - alt purple (brighter)
+                sectionsColor: ['#00000f', '#07395f','#417F73', '#414066'],
                 navigation: true,                
                 navigationTooltips: ['Intro','Project 1','Project 2','Other'],
                 anchors: ['page1','page2','page3','page4'],
-                //paddingTop: '3em',
-                //paddingBottom: '3em',
-                //autoScrolling: false,
-                //fitToSection: false,
-                //scrollBar: true,
-                //scrollOverflow: false,  TODO removes scrolling within sections - make sure there is no content to overflow - different settings for mobile??
-                responsiveWidth: 600, //will add continuous scrolling to sections/site when the browser width is less than 600
+                responsiveWidth: 768, // add continuous scrolling to sections/site when the browser width is less than 768px
                 responsiveHeight: 500,
                 lazyloading: true,
                 credits: { enabled: true, label: 'Made with fullPage.js', position: 'right'},
