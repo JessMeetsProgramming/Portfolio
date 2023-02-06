@@ -22,7 +22,7 @@
 }
 
 
-/* FONTS */
+/* FONT STYLING */
 html {
     font-size: 62.5%; /*root font size*/
 }
@@ -55,7 +55,13 @@ a span {
     line-height: 1.6em;
     color: aliceblue;
 }
+a#link:hover {
+    color:khaki;
+}
 
+::selection {
+    background: #9F86C0;/*;#59C1AE*/
+}
 
 /* Background image */
 #intro {
@@ -66,8 +72,8 @@ a span {
 /* decorative lines*/
 hr {
     width: 65%;
-    border: 5px solid rgb(89, 193, 174);
-    background-color: rgb(89, 193, 174);
+    border: 5px solid #59C1AE;
+    background-color: #59C1AE;
 }
 
 hr#one {
@@ -85,6 +91,8 @@ hr#two {
     padding: 10% 5%;
     color:#f0f8ff;
 }
+
+
 
 /* intro page text container */
 #blurb {
@@ -144,10 +152,10 @@ div#desktop {
 /*img styling*/
 .images img, video {
     cursor: pointer;
-    border-radius: 5px;   
+    border-radius: 15px;   
 }
 #breakout img {
-    border-radius: 5px;
+    border-radius: 15px;
     cursor: default;
     align-self: center;
     height: 100%;
@@ -182,10 +190,13 @@ div#mobile .images img {
 
 
 /* img tilt animation */
+
 #examples2 img:hover {
     animation-name: tilt;
     animation-duration: 0.3s;
-    animation-timing-function: ease;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
 }
 @keyframes tilt {
     0% { transform: rotate(0deg); }
@@ -193,6 +204,7 @@ div#mobile .images img {
     95% { transform: rotate(1deg); }
     100% { transform: rotate(0deg); }
 }
+
 
 
 /*********************    MEDIA QUERIES    ************************/
@@ -222,7 +234,7 @@ div#mobile .images img {
     /* formatting */    
     hr {
         width: 65%;
-        border: 4px solid rgb(89, 193, 174) !important;
+        border: 4px solid #59C1AE !important;
     }
     #blurb {
         width: 90% !important;
@@ -275,7 +287,7 @@ div#mobile .images img {
     /*formatting */
     hr {
         width: 75% !important;
-        border: 3px solid rgb(89, 193, 174) !important;
+        border: 3px solid #59C1AE !important;
     }
     #blurb {
         width: 90% !important;
@@ -326,7 +338,7 @@ div#mobile .images img {
     }  
     hr {
         width: 85%;
-        border: 4px solid rgb(89, 193, 174);
+        border: 4px solid #59C1AE;
     }
     #blurb {
         width: 85%;
@@ -436,7 +448,7 @@ div#mobile .images img {
 
 
 /* Large devices (laptops/desktops, 992px and up) */ 
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 992px), (min-width:768px) and (orientation:landscape) {
     /* fonts */
     h1 {
         font-size: 5rem;
@@ -511,15 +523,16 @@ div#mobile .images img {
         padding: 2%;
     }
     .content {
-        max-width: 95%;
+        max-width: 85%;/*95%;*/
         max-height: 90%;
         margin-top: 10px;
+        align-self:center;
     }
     #description1 {
         margin-right: 5%;
     }
-    .projects.fp-table {
-        justify-content: flex-start;
+    .projects.fp-table, #project3.fp-table {
+        justify-content: space-evenly;
     }
     /* nav span */
     #fp-nav ul li {
@@ -569,10 +582,14 @@ div#mobile .images img {
     /*formatting*/
     hr {
         width: 55%;
-        border: 7px solid rgb(89, 193, 174);
+        border: 7px solid #59C1AE;
     }
     .content {
-        max-width: 95%;
+        max-width: 80%;/*95%;*/
+        align-self:center;
+    }
+    .projects.fp-table, #project3.fp-table {
+        justify-content: space-evenly;/*center;*/
     }
     /*multimedia sizing*/
     div#mobile .images img, #breakout img {
@@ -612,17 +629,18 @@ div#mobile .images img {
     /*formatting*/
     hr {
         width: 60%;
-        border: 10px solid rgb(89, 193, 174);
+        border: 10px solid #59C1AE;
     }
     .content {
-        max-width: 100%;
+        max-width: 80%; /*100%*/
         margin-top: 5%;
+        align-self:center;
     }
     #description1 {
         margin-right: 5%;
     }
-    .projects.fp-table {
-        justify-content: flex-start;
+    .projects.fp-table, #project3.fp-table {
+        justify-content: space-evenly;/*center;*/
     }
     /* nav span */
     #fp-nav.fp-right {
